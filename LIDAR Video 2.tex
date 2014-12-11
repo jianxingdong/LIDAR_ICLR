@@ -20,19 +20,19 @@
 \maketitle
 
 \begin{abstract}
-When performing multi-modal fusion to perform an analytic task, spatio-temporal alignment of the incoming signals is often a key to the stability of all methods subsequently applied to the fused data. Lidar-Video systems like those many driverless cars are a common example of where keeping the Lidar and video channels registered to common physical features is important. We develop a deep learning technique that takes multiple channels of heterogeneous data, to test whether we can detect misalignment of the Lidar-video inputs.  A number of variations were tested on the Ford LV driving test data set. 
+When performing multi-modal fusion to perform an analytic task, spatio-temporal registration of the incoming signals is often a prerequisit to analyzing the fused data and critical to the stability of the analysis. Lidar-Video systems like on those many driverless cars are a common example of where keeping the Lidar and video channels registered to common physical features is important. We develop a deep learning method that takes multiple channels of heterogeneous data to detect the misalignment of the Lidar-video inputs. A number of variations were tested on the Ford LV driving test data set with minimal tuning of the deep conv nets parameters. 
 
 \end{abstract}
 
 \section{Motivation}
 % please include other motivations
-Navigation and situational awareness of optionally manned vehicles requires the integration of multiple sensing modalities such as LIDAR and video, but could just as easily be extended to  Radar, SWIR and GPS. Spatio-temporal registration of information from multi-modal sensors is technically challenging in its own right. For many tasks such as pedestrian and other object detection tasks that make use of multiple sensors, decision support methods rest on the assumption of proper registration. Most approaches in LIDAR-video for instance, build separate vision and lidar feature extraction methods and then try to identify common anchor points in both. The ability to dynamically register information from the available data channels for perception related tasks can alleviate this achielles ankel of multi-modal sensor fusion.
+Navigation and situational awareness of optionally manned vehicles requires the integration of multiple sensing modalities such as LIDAR and video, but could just as easily be extended to other modalities including Radar, SWIR and GPS. Spatio-temporal registration of information from multi-modal sensors is technically challenging in its own right. For many tasks such as pedestrian and object detection tasks that make use of multiple sensors, decision support methods rest on the assumption of proper registration. Most approaches in LIDAR-video for instance, build separate vision and lidar feature extraction methods and then try to identify common anchor points in both. Generating a single feature set on Lidar, Video and optical flow, enables the system to to capture mutual information among modalities more efficiently. The ability to dynamically register information from the available data channels for perception related tasks can alleviate the need for anchor points \emph{between} sensor modalities. We see auto-registration as a prerequisit need for operating on multi-modal information with confidence.
 
 %better fusion
-Deep neural networks lend themselves in a seamless manner for data fusion on these types of problems. By building a single model on all information being collected at once, it has been shown that features generated on the fused information [][] can provide insight that neither input alone can. From a more applied perspective, it is possible to create such systems with far less overhead. The need for domain experts and hand-crafted feature design are lessened, thereby allowing more rapid prototyping and testing. 
+Deep neural networks lend themselves in a seamless manner for data fusion on time series data. It has been shown [Ng multimodal] for some problems that features generated on the fused information [] can provide insight that neither input alone can. From a more applied perspective, it is possible to create such systems with far less overhead. The need for domain experts and hand-crafted feature design are lessened, thereby allowing more rapid prototyping and testing. 
 
 %speed constraints
-The trained nnets easily run within the real-time constraints of common frame rates and lidar data collection. 
+The trained nnets easily run within the real-time constraints of common frame rates and lidar data collection. \emph{Kishore, let me know if this isn't true for optical flow}
 
 %probably in next steps
 The generalization of autoregistration across multiple assets is clearly a path to be explored. 
