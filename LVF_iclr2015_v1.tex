@@ -131,6 +131,14 @@ For a given frame of size 800 x h there are approximately n= (800 x h)/s patches
 Preprocessing is repeated O times, where O is the number of offset classes. For this work we used two setups. A 5 class, linearly distributed set of offsets and a 9 class elliptically distributed set of offsets. (see figure x) For each offset class, \textbf{Kishore explain how you generated the data.} 
 %figure showing offset classes. 
 
+%% image of Ford Data set marked with Testing and Training
+\begin{figure}[htbp]
+    %\centering
+        \includegraphics[scale=0.65]{Figures/ImagePatchChannel.jpg}
+    \caption{At each time step the channels were sampled at the noted patch size at a fixed stride}
+    \label{fig:ImageChStride}
+\end{figure}
+
 In order to accurately detect misalignment in the LV sensor data, we've assumed there needs to be a lower bound on the amount of information present in each channel. For this data set, L was the only channel with regions of low information. A preprocess step was to eliminate all patches corresponding to L data with variance <x. This leads to the elimination of the majority of foreground patches in the data set, reducing the size of the training set by \textbf{z pct KISHORE}
 
 % subsection preprocessing (end)
