@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.28)  16 DEC 2014 17:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.28)  16 DEC 2014 15:44
 entering extended mode
-**C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v2MG.tex
-(C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v2MG.tex
+**C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v1.tex
+(C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v1.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -236,156 +236,275 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 \Gin@req@height=\dimen110
 \Gin@req@width=\dimen111
 )
-(C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v2MG.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip55
 
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen112
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen113
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count104
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count105
+\leftroot@=\count106
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count107
+\DOTSCASE@=\count108
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen114
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count109
+\c@MaxMatrixCols=\count110
+\dotsspace@=\muskip11
+\c@parentequation=\count111
+\dspbrk@lvl=\count112
+\tag@help=\toks17
+\row@=\count113
+\column@=\count114
+\maxfields@=\count115
+\andhelp@=\toks18
+\eqnshift@=\dimen115
+\alignsep@=\dimen116
+\tagshift@=\dimen117
+\tagwidth@=\dimen118
+\totwidth@=\dimen119
+\lineht@=\dimen120
+\@envbody=\toks19
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
+LaTeX Info: The control sequence `\[' is already robust on input line 471.
+LaTeX Info: The control sequence `\]' is already robust on input line 472.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\was\gensymb.sty"
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+No file LVF_iclr2015_v1.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 30.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\AtBeginShipoutBox=\box28
+\AtBeginShipoutBox=\box30
 
 (C:\Users\giering\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen112
-\scratchbox=\box29
-\nofMPsegments=\count105
-\nofMParguments=\count106
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen113
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
-\everyMPtoPDFconversion=\toks16
+\scratchcounter=\count116
+\scratchdimen=\dimen121
+\scratchbox=\box31
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen122
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks22
 )
-Package hyperref Info: Link coloring OFF on input line 28.
+Package hyperref Info: Link coloring OFF on input line 30.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count110
+\c@section@level=\count122
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
-
-(C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v2MG.out)
-(C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v2MG.out)
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 \@outlinefile=\write3
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 32.
+LaTeX Info: Redefining \celsius on input line 30.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 30.
+
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 30.
+Package gensymb Info: Using \Omega for \ohm on input line 30.
+
+Package gensymb Warning: Not defining \micro.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
- [1{C:/Users/giering/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
+
+
+Package natbib Warning: Citation `Thrun2011Googles-dr' on page 1 undefined on i
+nput line 77.
+
+[1{C:/Users/giering/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 95.
+<Figures/ford-truck-sensors.png, id=14, 653.8026pt x 244.7544pt>
+File: Figures/ford-truck-sensors.png Graphic file (type png)
 
+<use Figures/ford-truck-sensors.png>
+Package pdftex.def Info: Figures/ford-truck-sensors.png used on input line 84.
+(pdftex.def)             Requested size: 294.20845pt x 110.13844pt.
+
+
+Package natbib Warning: Citation `Pandey2011Ford-campu' on page 2 undefined on 
+input line 89.
+
+
+LaTeX Warning: Reference `fig:ford-truck-sensors' on page 2 undefined on input 
+line 89.
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 91.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
 
-<Figures/ford-truck-sensors.png, id=75, 653.8026pt x 244.7544pt>
-File: Figures/ford-truck-sensors.png Graphic file (type png)
-
-<use Figures/ford-truck-sensors.png>
-Package pdftex.def Info: Figures/ford-truck-sensors.png used on input line 109.
-
-(pdftex.def)             Requested size: 294.20845pt x 110.13844pt.
-
-<Figures/ford_train_test_track.jpg, id=88, 631.60968pt x 367.3725pt>
+<Figures/ford_train_test_track.jpg, id=16, 631.60968pt x 367.3725pt>
 File: Figures/ford_train_test_track.jpg Graphic file (type jpg)
 
 <use Figures/ford_train_test_track.jpg>
 Package pdftex.def Info: Figures/ford_train_test_track.jpg used on input line 1
-19.
+03.
 (pdftex.def)             Requested size: 221.0667pt x 128.58229pt.
 
-<Figures/lidar_dcnn_setup1.pdf, id=90, 1187.43625pt x 237.88875pt>
-File: Figures/lidar_dcnn_setup1.pdf Graphic file (type pdf)
 
-<use Figures/lidar_dcnn_setup1.pdf>
-Package pdftex.def Info: Figures/lidar_dcnn_setup1.pdf used on input line 128.
-(pdftex.def)             Requested size: 415.60892pt x 83.2623pt.
+LaTeX Warning: Reference `fig:ford_train_test_track' on page 2 undefined on inp
+ut line 108.
 
-Overfull \hbox (18.12393pt too wide) in paragraph at lines 128--129
- [][] 
- []
-
-[2] [3 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford-truck-sensors
-.png> <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford_train_test_tra
-ck.jpg> <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/lidar_dcnn_setup1
-.pdf>] <Figures/ImagePatchChannel.jpg, id=200, 298.716pt x 172.84575pt>
+[2 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford-truck-sensors.png
+> <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford_train_test_track.j
+pg>] <Figures/ImagePatchChannel.jpg, id=29, 298.716pt x 172.84575pt>
 File: Figures/ImagePatchChannel.jpg Graphic file (type jpg)
 
 <use Figures/ImagePatchChannel.jpg>
-Package pdftex.def Info: Figures/ImagePatchChannel.jpg used on input line 158.
+Package pdftex.def Info: Figures/ImagePatchChannel.jpg used on input line 135.
 (pdftex.def)             Requested size: 194.16309pt x 112.34839pt.
- [4 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ImagePatchChannel.jpg
->]
 
-Package natbib Warning: Citation `Opticalflow_realtime' on page 5 undefined on 
-input line 192.
+<Figures/lidar_dcnn_setup1.pdf, id=30, 1187.43625pt x 237.88875pt>
+File: Figures/lidar_dcnn_setup1.pdf Graphic file (type pdf)
+
+<use Figures/lidar_dcnn_setup1.pdf>
+Package pdftex.def Info: Figures/lidar_dcnn_setup1.pdf used on input line 152.
+(pdftex.def)             Requested size: 415.60892pt x 83.2623pt.
+
+Overfull \hbox (18.12393pt too wide) in paragraph at lines 152--153
+ [][] 
+ []
+
+[3 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ImagePatchChannel.jpg>
+]
+
+Package natbib Warning: Citation `Chase2008Real-Time-' on page 4 undefined on i
+nput line 169.
 
 
-Package natbib Warning: Citation `LiuOpticalFlow' on page 5 undefined on input 
-line 192.
+Package natbib Warning: Citation `Liu2009Beyond-Pix' on page 4 undefined on inp
+ut line 169.
 
-
-Underfull \vbox (badness 2020) has occurred while \output is active []
-
- [5]
-(C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v2MG.bbl)
+[4 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/lidar_dcnn_setup1.pdf>
+]
+No file LVF_iclr2015_v1.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
-[6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
- (C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v2MG.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
-Package rerunfilecheck Info: File `LVF_iclr2015_v2MG.out' has not changed.
-(rerunfilecheck)             Checksum: A74AF3DCBCF0D5F708909633A22E5A44;728.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
+[5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+ (C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
+
+
+Package rerunfilecheck Warning: File `LVF_iclr2015_v1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `LVF_iclr2015_v1.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  F59AEE1701FDBFBC2D16454C5F8896F3;728.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 227.
  ) 
 Here is how much of TeX's memory you used:
- 6111 strings out of 493921
- 89198 string characters out of 3144869
- 180817 words of memory out of 3000000
- 9322 multiletter control sequences out of 15000+200000
- 18525 words of font info for 32 fonts, out of 3000000 for 9000
+ 7002 strings out of 493921
+ 98560 string characters out of 3144869
+ 191095 words of memory out of 3000000
+ 10187 multiletter control sequences out of 15000+200000
+ 20224 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,12n,45p,1239b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,12n,45p,1207b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on LVF_iclr2015_v2MG.pdf (6 pages, 2053524 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on LVF_iclr2015_v1.pdf (5 pages, 2051036 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 172 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

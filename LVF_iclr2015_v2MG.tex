@@ -60,15 +60,24 @@ By including optical flow as input channels, we imbue the nnet with information 
 Kishore here
 
 %%Multimodal data fusion
-A great amount has been published on various multimodal fusion methods. 
+A great amount has been published on various multimodal fusion methods. The most common approach taken is to generate features of interest in each modality such as lines and create a decision support mechanism that aggregates the outputs across modalities. If spatial alignment is required across modalities, as it is for LiDAR/ video such filter methods \cite{Thrun2011Googles-dr} are required to ensure the registration across modalities. These filter methods for leveraging 3D LiDAR and 2D images are geometric in nature and make use of projections between the different data spaces. 
 
 
-%%DL multimodal data fusion
-In recent years, a number of papers have been written on the topic of using deep neural networks to analyze multimodal sensor inputs including audio/video \cite{Ngiam2011Multimodal} \cite{Kim2013Deep-Learn}, image/text \cite{Srivastava2012Multimodal}, image/depth \cite{Lenz2013Deep-Learn} and Lidar/video  \cite{Thrun2011Googles-dr}. To the best of our knowledge the use of multimodal deep learning models for dynamic real time LIDAR/video registration has not been presented. 
+%%DL multimodal data fusion with CNN's
+
+In recent years, a number of papers have been written on the topic of using deep neural networks to analyze multimodal sensor inputs including audio/video \cite{Ngiam2011Multimodal} \cite{Kim2013Deep-Learn}, image/text \cite{Srivastava2012Multimodal}, image/depth \cite{Lenz2013Deep-Learn} and Lidar/video. To the best of our knowledge the use of multimodal deep neural networks for dynamic real time LIDAR/video registration has not been presented.
+
+A common question often arises in data fusion methods, which is "at what level should features from the differing sensor streams be brought together?" Most similar to the more traditional data fusion methods is to train DNN's independently on sensor modalities and then use the high-level outputs of those networks as inputs to a subsequent DNN. This is analogous to the earlier example of learning 3D/2D features and subsequently identifying common geometric features. 
+
+It is possible however to apply DNN's in a more agnostic view enabling a unified set of features to be learned across multimodal data. In these cases the input channels aren't differentiated. Unsupervised methods in particular applying DBM's for learning such joint representations have been successful.  
+
+DCNN's enable a similar agnostic approach to input channels. A significant difference of course is that target data is required to train them as classifiers. \emph{find examples in the literature}. This is the approach chosen by us for automating the registration of LiDAR/video/optical-flow, in which we are combining 1D/3D/2D data representations to learn a unified model across all 6D. 
+
+
 
 
 \label{sec:previous_work}
-Need some references to define the state of the art 
+
 
 % section previous_work (end)
 
@@ -159,6 +168,19 @@ In order to accurately detect misalignment in the LV sensor data, we've assumed 
 
 \section{Model Description}
 \textbf{need to describe the parameters post-processing,classification metric for each patch,a table with common params for the experiments would help,voting scheme}
+
+Our models for auto-registration are DCNN's trained to classify the current misalignment of the LiDAR/video data streams into one of a predefined set of offsets. DCNN's are probably the most successful deep learning model to date on fielded applications. The fact that the algorithm shares weights in the training phase, results in fewer model parameters and more efficient training. DCNN's are particularly useful for problems in which local structure is important, such as object recognition in pictures. The alternating steps of convolution and pooling \textbf{(seen in figure X)}  generates features at multiple scales which in turn imbues DCNN's with scale invariant characteristics.
+
+The basic CNN structure we use has the following three
+characteristics: 1) input locality: We learn a set of filters, each of
+which receives the input from a local range of frequencies; 2)
+weight sharing: Each filter shifts along the frequency axis while
+computing the output with tied filter weights (this is
+mathematically equivalent to the ubiquitous convolution operation
+in DSP); and 3) max pooling or sub-sampling: High-level features
+with lower resolution are produced by the CNN. A combination of
+these characteristics endows the CNN with invariant properties for
+the input acoustic patterns that shift along the frequency axis.
 
 The model consists of a 4-layer \textbf{?} CNN classifier \textit{see image of network} that estimates the offset between the LV inputs at each time step. For each patch within a timestep, there are O variants with the LVF inputs offset by the predetermined amounts. The CNN outputs to a softmax layer, thereby providing an offset classification value for each patch of the frame. 
 % figure of the colored class choices for the 5 class data set
