@@ -95,8 +95,7 @@ The FORD LIDAR-Video dataset \cite{Pandey2011Ford-campu} is collected by an auto
     \item Xsens MTi-G sensor consisting of accelerometer, gyroscope, magnetometer, integrated GPS receiver, static pressure sensor and temperature sensor. It measures the GPS co-ordinates of the vehicle and also provides the 3D velocity and 3D rate of turn.
 \end{itemize}
 
-% \textbf{ Kishore -Detailed description of the ford data set [], our test and training and the justifications for it. framerate.
-% Vivek - a brief description of the hardware used. }
+% \textbf{ Kishore -Detailed description of the ford data set [], our test and training and the justifications for it. framerate.Vivek - a brief description of the hardware used. }
 
 \begin{figure}[htbp]
     \centering
@@ -139,13 +138,6 @@ In order to accurately detect misalignment in the LV sensor data, we've assumed 
 \section{Model Description} % (fold)
 \label{sec:model_description}
 
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[scale=0.35]{Figures/lidar_dcnn_setup1.pdf}
-    \caption{Experimental setup of the LIDAR-Video DCNN}
-    \label{fig:Figures_lidar_dcnn_setup1}
-\end{figure}
-
 \textbf{need to describe the parameters post-processing,classification metric for each patch,a table with common params for the experiments would help,voting scheme}
 
 The model consists of a 4-layer \textbf{?} CNN classifier \textit{see image of network} that estimates the offset between the LV inputs at each time step. For each patch within a timestep, there are O variants with the LVF inputs offset by the predetermined amounts. The CNN outputs to a softmax layer, thereby providing an offset classification value for each patch of the frame. 
@@ -168,6 +160,16 @@ Optical flow gives a rough estimate of velocity at each pixel given two consecut
 
 \section{Experiments and Post-processing} % (fold)
 \label{sec:experiments_and_post_processing}
+
+The NVIDIA Kepler series K40 GPUs [\cite{NVIDIA-Inc.2012NVIDIAs-Ne}] are very FLOPS/Watt efficient and are being used to drive real-time image processing capabilities [\cite{Venugopal2013Accelerati}]. These GPUs consist of 2880 cores with 12 GB of on-board device memory (RAM). Deep Learning applications have been targeted on GPUs previously in [\cite{Krizhevsky2012Imagenet-C}] and these implementations are memory bound. A GPU with higher memory capacity is excellent for these experiments due to the number of channels that are stacked and provided as the input to the DCNN. The LIDAR-Video dataset is augmented with the optical flow information resulting in 6 channels which means that the input to the DCNN is $32\times32\times6$ per patch. Figure \ref{fig:Figures_lidar_dcnn_setup1} shows the setup used for the DCNN implementation on the GPU, where \emph{C} defines the number of channels.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.35]{Figures/lidar_dcnn_setup1.pdf}
+    \caption{Experimental setup of the LIDAR-Video DCNN with $5\times5$ convolution}
+    \label{fig:Figures_lidar_dcnn_setup1}
+\end{figure}
+
 \textit{Need a complete list of the experiments run
 images to visualize the frame level results
 please place any confusion matrices and your comments on what you think the results say.
