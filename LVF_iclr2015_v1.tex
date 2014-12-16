@@ -55,24 +55,55 @@ The generalization of autoregistration across multiple assets is clearly a path 
 %%dynamics
 By including optical flow as input channels, we imbue the nnet with information on the dynamics observed across time steps. 
 
-
-\section{Previous Work}
+\section{Previous Work} % (fold)
+\label{sec:previous_work}
 Need some references to define the state of the art 
 
-\section{Problem Statement}
-need detailed description and citation regarding the ford data set
-need greater clarity on the optical flow method used. 
+% section previous_work (end)
+
+
+
+\section{Problem Statement} % (fold)
+\label{sec:problem_statement}
+% need detailed description and citation regarding the ford data set
+% need greater clarity on the optical flow method used.
 
 Being able to detect and correct the misalignment (registration, calibration) among sensors of the same or different kinds is critical when operating on the fused information emanating from them. For this work DCNN's were implemented for the detection of small spatial misalignments in Lidar and Video frames. The data was collected from a driverless car was chosen as the multi-modal fusion test case. LV is a common combination for providing perception capabilities to many types of ground and airborne platforms including driverless cars [google, ford]. 
 
-\subsection{Ford LV data set and experimental setup}
+The FORD LIDAR-Video dataset \cite{Pandey2011Ford-campu} is collected by an autonomous Ford F-250 vehicle integrated with the following perception and navigation sensors:
+\begin{itemize}
+    \item Velodyne HDL-64E LIDAR with two blocks of lasers spinning at 10 Hz and a maximum range of 120m.
+\end{itemize}
+
+
+\subsection{Ford LIDAR-Video Dataset and Experimental Setup} % (fold)
+\label{sub:ford_lidar_video_dataset_and_experimental_setup}
+
 \textbf{ Kishore -Detailed description of the ford data set [], our test and training and the justifications for it. framerate. 
 Vivek - a brief description of the hardware used. }
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.45]{Figures/image003.jpg}
+    \caption{Trajectory }
+    \label{fig:dataset_partition}
+\end{figure}
+
 %% image the ford data collection system and camera views
 %% image of Ford Data set marked with Testing and Training
-As shown in diagram-n, we divided the data set into training and testing sections A and B. They were chosen in a manner that minimizes the likelihood of contamination between training and testing. Because of this, the direction of the lighting is source is never the same in the testing and training sets. If our methods are generalizable, they should be able to overcome this bias in the data. 
+As shown in Figure \ref{fig:dataset_partition}, we divided the data set into training and testing sections A and B. They were chosen in a manner that minimizes the likelihood of contamination between training and testing. Because of this, the direction of the lighting is source is never the same in the testing and training sets. If our methods are generalizable, they should be able to overcome this bias in the data.  
 
-\subsection{Preprocessing}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.35]{Figures/lidar_dcnn_setup1.pdf}
+    \caption{Experimental setup of the LIDAR-Video DCNN}
+    \label{fig:Figures_lidar_dcnn_setup1}
+\end{figure}
+
+% subsection ford_lidar_video_dataset_and_experimental_setup (end)
+
+\subsection{Preprocessing} % (fold)
+\label{sub:preprocessing}
 %image of LVF data with channels, patches and images(frames) denoted.
 At each video frame timestep, the inputs to our model consisted of C-channels of data with C ranging from 3-6 channels. Channels consisted of inputs that included greyscale and (R,G,B)-video channels, horizontal and vertical optical flow and Lidar depth information. Each channel was cropped to a uniform 800x??? pixels. Each time step has an 800 x ??? x C array of integer values.
 
@@ -93,6 +124,10 @@ Preprocessing is repeated O times, where O is the number of offset classes. For 
 
 In order to accurately detect misalignment in the LV sensor data, we've assumed there needs to be a lower bound on the amount of information present in each channel. For this data set, L was the only channel with regions of low information. A preprocess step was to eliminate all patches corresponding to L data with variance <x. This leads to the elimination of the majority of foreground patches in the data set, reducing the size of the training set by \textbf{z pct KISHORE}
 
+% subsection preprocessing (end)
+
+% section problem_statement (end)
+
 \section{Model Description}
 \textbf{need to describe the parameters post-processing,classification metric for each patch,a table with common params for the experiments would help,voting scheme}
 
@@ -104,7 +139,8 @@ For each frame a simple voting scheme is used to aggregate the patch level offse
 
 \subsection{optical flow} \textit{kishore, please discuss the motivation to include dynamics, how we performed it and how we'd need to do it if running in real time. this is where we can point ot proof that it improves prediction.}
 
-\section{experiments and post-processing}
+\section{Experiments and Post-processing} % (fold)
+\label{sec:experiments_and_post_processing}
 \textit{Need a complete list of the experiments run
 images to visualize the frame level results
 please place any confusion matrices and your comments on what you think the results say.
@@ -124,11 +160,16 @@ Table 2 lists the inputs and CNN parameters explored ranked in the order of incr
 
  \textbf{Discussion: what results confirmed expectations or surprised us (grey scale). Can we confidently say optical flow improves prediction. }
 
-\section{conclusion and future work}
+
+% section experiments_and_post_processing (end)
+
+\section{Conclusions and Future Work} % (fold)
+\label{sec:conclusions_and_future_work}
 We did it. We're great.
 
-future: implement a method that doesn't require ground truth and also generalizes easily to a wide array of sensors. Test it on data collected from airborne platforms that are noisier and have more degrees of freedom.  
+future: implement a method that doesn't require ground truth and also generalizes easily to a wide array of sensors. Test it on data collected from airborne platforms that are noisier and have more degrees of freedom. 
 
+% section conclusions_and_future_work (end)
 
 
 \section{references}
