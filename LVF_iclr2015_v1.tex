@@ -81,16 +81,26 @@ The FORD LIDAR-Video dataset \cite{Pandey2011Ford-campu} is collected by an auto
 \textbf{ Kishore -Detailed description of the ford data set [], our test and training and the justifications for it. framerate. 
 Vivek - a brief description of the hardware used. }
 
+% Ford Dataset
+%% image the ford data collection system and camera views
 \begin{figure}[htbp]
     \centering
-        \includegraphics[scale=0.45]{Figures/image003.jpg}
-    \caption{Trajectory }
-    \label{fig:dataset_partition}
+        \includegraphics[scale=0.45]{Figures/ford-truck-sensors.png}
+    \caption{Left: The modified Ford F-250 pickup truck~\ref{gpandey-2011a}. Right: Relative position of the sensors with respect to the body frame~\ref{gpandey-2011a}.}
+    \label{fig:ford-truck-sensors}
 \end{figure}
 
-%% image the ford data collection system and camera views
+Ford Campus Vision and Lidar dataset~\ref{gpandey-2011a} (Ford-VL) is a publicly available dataset collected by an autonomous ground vehicle mounted with multiple sensors shown in Figure~\ref{fig:ford-truck-sensors}. In this work we used time-registered Velodyne 3D-lidar scanner (Lidar) and Point Grey Ladybug3 omnidirectional camera(Video) data collected while driving in a loop in the downtown Dearborn Michigan. Velodyne sensor has a range of 120 m with the lidar spinning at 10 Hz. Video is captured at 8 fps (1600x600 resolution) using array of six 2-Megapixel cameras to collect video from 80\% of sphere.  
+
 %% image of Ford Data set marked with Testing and Training
-As shown in Figure \ref{fig:dataset_partition}, we divided the data set into training and testing sections A and B. They were chosen in a manner that minimizes the likelihood of contamination between training and testing. Because of this, the direction of the lighting is source is never the same in the testing and training sets. If our methods are generalizable, they should be able to overcome this bias in the data.  
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.35]{Figures/ford_train_test_track.jpg}
+    \caption{Training (A to B) and testing (C to D) tracks in the downtown Dearborn Michigan.}
+    \label{fig:ford_train_test_track}
+\end{figure}
+
+As shown in Figure~\ref{fig:ford_train_test_track}, we divided the data set into training and testing sections A to B and C to D respectively. They were chosen in a manner that minimizes the likelihood of contamination between training and testing. Because of this, the direction of the lighting is source is never the same in the testing and training sets. If our methods are generalizable, they should be able to overcome this bias in the data.   
 
 \begin{figure}[htbp]
     \centering
