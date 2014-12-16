@@ -69,14 +69,13 @@ Need some references to define the state of the art
 
 Being able to detect and correct the misalignment (registration, calibration) among sensors of the same or different kinds is critical when operating on the fused information emanating from them. For this work DCNN's were implemented for the detection of small spatial misalignments in Lidar and Video frames. The data was collected from a driverless car was chosen as the multi-modal fusion test case. LV is a common combination for providing perception capabilities to many types of ground and airborne platforms including driverless cars [google, ford]. 
 
+\subsection{Ford LIDAR-Video Dataset and Experimental Setup} % (fold)
+\label{sub:ford_lidar_video_dataset_and_experimental_setup}
+
 The FORD LIDAR-Video dataset \cite{Pandey2011Ford-campu} is collected by an autonomous Ford F-250 vehicle integrated with the following perception and navigation sensors:
 \begin{itemize}
     \item Velodyne HDL-64E LIDAR with two blocks of lasers spinning at 10 Hz and a maximum range of 120m.
 \end{itemize}
-
-
-\subsection{Ford LIDAR-Video Dataset and Experimental Setup} % (fold)
-\label{sub:ford_lidar_video_dataset_and_experimental_setup}
 
 \textbf{ Kishore -Detailed description of the ford data set [], our test and training and the justifications for it. framerate. 
 Vivek - a brief description of the hardware used. }
@@ -86,11 +85,11 @@ Vivek - a brief description of the hardware used. }
 \begin{figure}[htbp]
     \centering
         \includegraphics[scale=0.45]{Figures/ford-truck-sensors.png}
-    \caption{Left: The modified Ford F-250 pickup truck~\ref{gpandey-2011a}. Right: Relative position of the sensors with respect to the body frame~\ref{gpandey-2011a}.}
+    \caption{Left: The modified Ford F-250 pickup truck \cite{Pandey2011Ford-campu}. Right: Relative position of the sensors with respect to the body frame \cite{Pandey2011Ford-campu}.}
     \label{fig:ford-truck-sensors}
 \end{figure}
 
-Ford Campus Vision and Lidar dataset~\ref{gpandey-2011a} (Ford-VL) is a publicly available dataset collected by an autonomous ground vehicle mounted with multiple sensors shown in Figure~\ref{fig:ford-truck-sensors}. In this work we used time-registered Velodyne 3D-lidar scanner (Lidar) and Point Grey Ladybug3 omnidirectional camera(Video) data collected while driving in a loop in the downtown Dearborn Michigan. Velodyne sensor has a range of 120 m with the lidar spinning at 10 Hz. Video is captured at 8 fps (1600x600 resolution) using array of six 2-Megapixel cameras to collect video from 80\% of sphere.  
+Ford Campus Vision and Lidar dataset \cite{Pandey2011Ford-campu} (Ford-VL) is a publicly available dataset collected by an autonomous ground vehicle mounted with multiple sensors shown in Figure \ref{fig:ford-truck-sensors}. In this work we used time-registered Velodyne 3D-lidar scanner (Lidar) and Point Grey Ladybug3 omnidirectional camera(Video) data collected while driving in a loop in the downtown Dearborn Michigan. Velodyne sensor has a range of 120 m with the lidar spinning at 10 Hz. Video is captured at 8 fps (1600x600 resolution) using array of six 2-Megapixel cameras to collect video from 80\% of sphere.  
 
 %% image of Ford Data set marked with Testing and Training
 \begin{figure}[htbp]
@@ -100,7 +99,7 @@ Ford Campus Vision and Lidar dataset~\ref{gpandey-2011a} (Ford-VL) is a publicly
     \label{fig:ford_train_test_track}
 \end{figure}
 
-As shown in Figure~\ref{fig:ford_train_test_track}, we divided the data set into training and testing sections A to B and C to D respectively. They were chosen in a manner that minimizes the likelihood of contamination between training and testing. Because of this, the direction of the lighting is source is never the same in the testing and training sets. If our methods are generalizable, they should be able to overcome this bias in the data.   
+As shown in Figure \ref{fig:ford_train_test_track}, we divided the data set into training and testing sections A to B and C to D respectively. They were chosen in a manner that minimizes the likelihood of contamination between training and testing. Because of this, the direction of the lighting is source is never the same in the testing and training sets. If our methods are generalizable, they should be able to overcome this bias in the data.   
 
 \begin{figure}[htbp]
     \centering
