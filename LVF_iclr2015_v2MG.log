@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.28)  16 DEC 2014 13:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.28)  16 DEC 2014 14:15
 entering extended mode
 **C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v2MG.tex
 (C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v2MG.tex
@@ -308,14 +308,14 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
 
-<Figures/ford-truck-sensors.png, id=64, 653.8026pt x 244.7544pt>
+<Figures/ford-truck-sensors.png, id=75, 653.8026pt x 244.7544pt>
 File: Figures/ford-truck-sensors.png Graphic file (type png)
 
 <use Figures/ford-truck-sensors.png>
 Package pdftex.def Info: Figures/ford-truck-sensors.png used on input line 93.
 (pdftex.def)             Requested size: 294.20845pt x 110.13844pt.
 
-<Figures/ford_train_test_track.jpg, id=77, 631.60968pt x 367.3725pt>
+<Figures/ford_train_test_track.jpg, id=88, 631.60968pt x 367.3725pt>
 File: Figures/ford_train_test_track.jpg Graphic file (type jpg)
 
 <use Figures/ford_train_test_track.jpg>
@@ -323,7 +323,7 @@ Package pdftex.def Info: Figures/ford_train_test_track.jpg used on input line 1
 03.
 (pdftex.def)             Requested size: 221.0667pt x 128.58229pt.
 
-<Figures/lidar_dcnn_setup1.pdf, id=79, 1187.43625pt x 237.88875pt>
+<Figures/lidar_dcnn_setup1.pdf, id=90, 1187.43625pt x 237.88875pt>
 File: Figures/lidar_dcnn_setup1.pdf Graphic file (type pdf)
 
 <use Figures/lidar_dcnn_setup1.pdf>
@@ -335,7 +335,7 @@ Overfull \hbox (18.12393pt too wide) in paragraph at lines 112--113
  []
 
 [2 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford-truck-sensors.png
->] <Figures/ImagePatchChannel.jpg, id=90, 298.716pt x 172.84575pt>
+>] <Figures/ImagePatchChannel.jpg, id=105, 298.716pt x 172.84575pt>
 File: Figures/ImagePatchChannel.jpg Graphic file (type jpg)
 
 <use Figures/ImagePatchChannel.jpg>
@@ -368,22 +368,22 @@ Package rerunfilecheck Info: File `LVF_iclr2015_v2MG.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 205.
  ) 
 Here is how much of TeX's memory you used:
- 6090 strings out of 493921
- 88631 string characters out of 3144869
- 179558 words of memory out of 3000000
- 9307 multiletter control sequences out of 15000+200000
+ 6110 strings out of 493921
+ 89192 string characters out of 3144869
+ 179817 words of memory out of 3000000
+ 9322 multiletter control sequences out of 15000+200000
  18525 words of font info for 32 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,12n,45p,1209b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,12n,45p,1239b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on LVF_iclr2015_v2MG.pdf (5 pages, 2044298 bytes).
+Output written on LVF_iclr2015_v2MG.pdf (5 pages, 2049551 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
+ 236 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
  117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
