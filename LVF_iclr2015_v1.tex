@@ -35,7 +35,9 @@ When performing multi-modal fusion to perform an analytic task, spatio-temporal 
 
 \end{abstract}
 
-\section{Motivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motivation} % (fold)
+\label{sec:motivation}
 % please include other motivations
 Navigation and situational awareness of optionally manned vehicles requires the integration of multiple sensing modalities such as LIDAR and video, but could just as easily be extended to other modalities including Radar, SWIR and GPS. Spatio-temporal registration of information from multi-modal sensors is technically challenging in its own right. For many tasks such as pedestrian and object detection tasks that make use of multiple sensors, decision support methods rest on the assumption of proper registration. Most approaches [][] in LIDAR-video for instance, build separate vision and lidar feature extraction methods and then try to identify common anchor points in both. Generating a single feature set on Lidar, Video and optical flow, enables the system to to capture mutual information among modalities more efficiently. The ability to dynamically register information from the available data channels for perception related tasks can alleviate the need for anchor points \emph{between} sensor modalities. We see auto-registration as a prerequisit need for operating on multi-modal information with confidence.
 
@@ -54,6 +56,9 @@ The generalization of autoregistration across multiple assets is clearly a path 
 %%dynamics
 By including optical flow as input channels, we imbue the nnet with information on the dynamics observed across time steps. 
 
+% section motivation (end)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Previous Work} % (fold)
 \label{sec:previous_work}
 Need some references to define the state of the art 
@@ -61,7 +66,7 @@ Need some references to define the state of the art
 % section previous_work (end)
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem Statement} % (fold)
 \label{sec:problem_statement}
 % need detailed description and citation regarding the ford data set
@@ -101,19 +106,12 @@ Ford Campus Vision and Lidar dataset \cite{Pandey2011Ford-campu} (Ford-VL) is a 
 
 As shown in Figure \ref{fig:ford_train_test_track}, we divided the data set into training and testing sections A to B and C to D respectively. They were chosen in a manner that minimizes the likelihood of contamination between training and testing. Because of this, the direction of the lighting is source is never the same in the testing and training sets. If our methods are generalizable, they should be able to overcome this bias in the data.   
 
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[scale=0.35]{Figures/lidar_dcnn_setup1.pdf}
-    \caption{Experimental setup of the LIDAR-Video DCNN}
-    \label{fig:Figures_lidar_dcnn_setup1}
-\end{figure}
-
 % subsection ford_lidar_video_dataset_and_experimental_setup (end)
 
 \subsection{Preprocessing} % (fold)
 \label{sub:preprocessing}
 %image of LVF data with channels, patches and images(frames) denoted.
-At each video frame timestep, the inputs to our model consisted of C-channels of data with C ranging from 3-6 channels. Channels consisted of inputs that included greyscale and (R,G,B)-video channels, horizontal and vertical optical flow and Lidar depth information. Each channel was cropped to a uniform 800x??? pixels. Each time step has an 800 x ??? x C array of integer values.
+At each video frame timestep, the inputs to our model consisted of C-channels of data with C ranging from 3-6 channels. Channels consisted of inputs that included greyscale and (R,G,B)-video channels, horizontal and vertical optical flow and Lidar depth information. Each channel was cropped to a uniform 800x250 pixels. Each time step has an 800 x 250 x C array of integer values.
 
 These arrays were subdivided into p x p x C patches at a prescribed stride. For any experiment we can denote the preprocessing parameters 
 \begin{itemize}
@@ -136,7 +134,17 @@ In order to accurately detect misalignment in the LV sensor data, we've assumed 
 
 % section problem_statement (end)
 
-\section{Model Description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model Description} % (fold)
+\label{sec:model_description}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.35]{Figures/lidar_dcnn_setup1.pdf}
+    \caption{Experimental setup of the LIDAR-Video DCNN}
+    \label{fig:Figures_lidar_dcnn_setup1}
+\end{figure}
+
 \textbf{need to describe the parameters post-processing,classification metric for each patch,a table with common params for the experiments would help,voting scheme}
 
 The model consists of a 4-layer \textbf{?} CNN classifier \textit{see image of network} that estimates the offset between the LV inputs at each time step. For each patch within a timestep, there are O variants with the LVF inputs offset by the predetermined amounts. The CNN outputs to a softmax layer, thereby providing an offset classification value for each patch of the frame. 
@@ -145,7 +153,15 @@ figure x: In the 5 class example we color each patch of the frame with a color c
 
 For each frame a simple voting scheme is used to aggregate the patch level offset predictions to frame level predictions. A sample histogram of the patch level predictions is show in figure x.
 
-\subsection{optical flow} \textit{kishore, please discuss the motivation to include dynamics, how we performed it and how we'd need to do it if running in real time. this is where we can point ot proof that it improves prediction.}
+
+\subsection{Optical Flow} % (fold)
+\label{sub:optical_flow}
+\textit{kishore, please discuss the motivation to include dynamics, how we performed it and how we'd need to do it if running in real time. this is where we can point ot proof that it improves prediction.}
+
+% subsection optical_flow (end)
+% section model_description (end)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experiments and Post-processing} % (fold)
 \label{sec:experiments_and_post_processing}
@@ -154,23 +170,32 @@ images to visualize the frame level results
 please place any confusion matrices and your comments on what you think the results say.
 feel free to suggest any tables or other visuals to include.}
 
-\subsection{5 class tests}
+
+
+
+\subsection{5 class tests} % (fold)
+\label{sub:5_class_tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
 In our initial tests, the linearly distributed set of 5 offsets of the LV data were performed. Table 1 lists the inputs and CNN parameters explored ranked in the order of increasing accuracy \textbf{(define accuracy and other cm metrics), include training vs test error and conf mats if room allows}.  
 
 As can be seen ... 
+% subsection 5_class_tests (end)
 
-\subsection{9 class tests}
+
+\subsection{9 class tests} % (fold)
+\label{sub:9_class_tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
 The subsequent tests were designed to understand whether the simple linear displacement model of the 5-class test could be generalized to a model capable of discriminating multiple directions and displacement magnitude. To acheive this 8 positions were chosen on an ellipse along with it's center \textbf{describe the parabola}. LV was offset in a manner similar to the 5 class test. Nine training and test sets were generated and an identicle patch level CNN was constructed differing only in the 9 class softmax output layer. 
 
 Table 2 lists the inputs and CNN parameters explored ranked in the order of increasing accuracy \textbf{(define accuracy and other cm metrics), include training vs test error and conf mats if room allows}.  
 
  \textbf{Discussion: what results confirmed expectations or surprised us (grey scale). Can we confidently say optical flow improves prediction. }
-
+% subsection 9_class_tests (end)
 
 % section experiments_and_post_processing (end)
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and Future Work} % (fold)
 \label{sec:conclusions_and_future_work}
 We did it. We're great.
@@ -180,6 +205,7 @@ future: implement a method that doesn't require ground truth and also generalize
 % section conclusions_and_future_work (end)
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{references}
 populate the papers to be cited in the folder and if possible the bib file
 
