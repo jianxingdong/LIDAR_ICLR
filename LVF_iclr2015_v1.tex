@@ -10,7 +10,9 @@
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage[pdftex]{graphicx}
-
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{fixltx2e} % Fixing numbering problem when using figure/table* 
+\usepackage{gensymb}
 
 \title{Multi-modal Sensor Registration for Vehicle Perception via Deep Neural Networks}
 
@@ -35,7 +37,9 @@ When performing multi-modal fusion to perform an analytic task, spatio-temporal 
 
 \end{abstract}
 
-\section{Motivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motivation} % (fold)
+\label{sec:motivation}
 % please include other motivations
 Navigation and situational awareness of optionally manned vehicles requires the integration of multiple sensing modalities such as LIDAR and video, but could just as easily be extended to other modalities including Radar, SWIR and GPS. Spatio-temporal registration of information from multi-modal sensors is technically challenging in its own right. For many tasks such as pedestrian and object detection tasks that make use of multiple sensors, decision support methods rest on the assumption of proper registration. Most approaches [][] in LIDAR-video for instance, build separate vision and lidar feature extraction methods and then try to identify common anchor points in both. Generating a single feature set on Lidar, Video and optical flow, enables the system to to capture mutual information among modalities more efficiently. The ability to dynamically register information from the available data channels for perception related tasks can alleviate the need for anchor points \emph{between} sensor modalities. We see auto-registration as a prerequisit need for operating on multi-modal information with confidence.
 
@@ -54,6 +58,9 @@ The generalization of autoregistration across multiple assets is clearly a path 
 %%dynamics
 By including optical flow as input channels, we imbue the nnet with information on the dynamics observed across time steps. 
 
+% section motivation (end)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Previous Work} % (fold)
 \label{sec:previous_work}
 Need some references to define the state of the art 
@@ -61,38 +68,36 @@ Need some references to define the state of the art
 % section previous_work (end)
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem Statement} % (fold)
 \label{sec:problem_statement}
 % need detailed description and citation regarding the ford data set
 % need greater clarity on the optical flow method used.
 
-Being able to detect and correct the misalignment (registration, calibration) among sensors of the same or different kinds is critical when operating on the fused information emanating from them. For this work DCNN's were implemented for the detection of small spatial misalignments in Lidar and Video frames. The data was collected from a driverless car was chosen as the multi-modal fusion test case. LV is a common combination for providing perception capabilities to many types of ground and airborne platforms including driverless cars [google, ford]. 
-
-The FORD LIDAR-Video dataset \cite{Pandey2011Ford-campu} is collected by an autonomous Ford F-250 vehicle integrated with the following perception and navigation sensors:
-\begin{itemize}
-    \item Velodyne HDL-64E LIDAR with two blocks of lasers spinning at 10 Hz and a maximum range of 120m.
-\end{itemize}
-
+Being able to detect and correct the misalignment (registration, calibration) among sensors of the same or different kinds is critical when operating on the fused information emanating from them. For this work Deep Convolutional Neural Networks (DCNN) were implemented for the detection of small spatial misalignments in LIDAR and Video frames. The data collected from a driverless car was chosen as the multi-modal fusion test case. LIDAR-Video is a common combination for providing perception capabilities to many types of ground and airborne platforms including driverless cars \cite{Thrun2011Googles-dr}. 
 
 \subsection{Ford LIDAR-Video Dataset and Experimental Setup} % (fold)
 \label{sub:ford_lidar_video_dataset_and_experimental_setup}
 
-\textbf{ Kishore -Detailed description of the ford data set [], our test and training and the justifications for it. framerate. 
-Vivek - a brief description of the hardware used. }
-
-% Ford Dataset
-%% image the ford data collection system and camera views
 \begin{figure}[htbp]
     \centering
         \includegraphics[scale=0.45]{Figures/ford-truck-sensors.png}
-    \caption{Left: The modified Ford F-250 pickup truck \cite{Pandey2011Ford-campu}. Right: Relative position of the sensors with respect to the body frame \cite{Pandey2011Ford-campu}.}
+    \caption{Left: The modified Ford F-250 pickup truck. Right: Relative position of the sensors with respect to the body frame.}
     \label{fig:ford-truck-sensors}
 \end{figure}
 
-Ford Campus Vision and Lidar dataset \citep{Pandey2011Ford-campu} (Ford-VL) is a publicly available dataset collected by an autonomous ground vehicle mounted with multiple sensors shown in Figure~\ref{fig:ford-truck-sensors}. In this work we used time-registered Velodyne 3D-lidar scanner (Lidar) and Point Grey Ladybug3 omnidirectional camera(Video) data collected while driving in a loop in the downtown Dearborn Michigan. Velodyne sensor has a range of 120 m with the lidar spinning at 10 Hz. Video is captured at 8 fps (1600x600 resolution) using array of six 2-Megapixel cameras to collect video from 80\% of sphere.  
+The FORD LIDAR-Video dataset \cite{Pandey2011Ford-campu} is collected by an autonomous Ford F-250 vehicle integrated with the following perception and navigation sensors as shown in Figure \ref{fig:ford-truck-sensors}:
+\begin{itemize}
+    \item Velodyne HDL-64E LIDAR with two blocks of lasers spinning at 10 Hz and a maximum range of 120m.
+    \item Point Grey Ladybug3 omnidirectional camera system with six 2-Megapixel cameras collecting video data at 8fps with $1600\times1600$ resolution.
+    \item Two Riegl LMS-Q120 LIDAR sensors installed in the front of the vehicle generating range and intensity data when the laser sweeps its 80\degree field of view (FOV).
+    \item Applanix POS-LV420 INS with Trimble GPS system providing the 6 degrees of freedom (DOF) estimates at 100 Hz.
+    \item Xsens MTi-G sensor consisting of accelerometer, gyroscope, magnetometer, integrated GPS receiver, static pressure sensor and temperature sensor. It measures the GPS co-ordinates of the vehicle and also provides the 3D velocity and 3D rate of turn.
+\end{itemize}
 
-%% image of Ford Data set marked with Testing and Training
+% \textbf{ Kishore -Detailed description of the ford data set [], our test and training and the justifications for it. framerate.
+% Vivek - a brief description of the hardware used. }
+
 \begin{figure}[htbp]
     \centering
         \includegraphics[scale=0.35]{Figures/ford_train_test_track.jpg}
@@ -100,21 +105,14 @@ Ford Campus Vision and Lidar dataset \citep{Pandey2011Ford-campu} (Ford-VL) is a
     \label{fig:ford_train_test_track}
 \end{figure}
 
-As shown in Figure~\ref{fig:ford_train_test_track}, we divided the data set into training and testing sections A to B and C to D respectively. They were chosen in a manner that minimizes the likelihood of contamination between training and testing. Because of this, the direction of the lighting is source is never the same in the testing and training sets. If our methods are generalizable, they should be able to overcome this bias in the data.   
-
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[scale=0.35]{Figures/lidar_dcnn_setup1.pdf}
-    \caption{Experimental setup of the LIDAR-Video DCNN}
-    \label{fig:Figures_lidar_dcnn_setup1}
-\end{figure}
+This dataset is generated by the vehicle while driving in and around the Ford research campus and downtown Michigan. The data includes feature rich downtown areas as well as featureless empty parking lots. As shown in Figure \ref{fig:ford_train_test_track}, we divided the data set into training and testing sections A to B and C to D respectively. They were chosen in a manner that minimizes the likelihood of contamination between training and testing. Because of this, the direction of the light source is never the same in the testing and training sets. %If our methods are generalizable, they should be able to overcome this bias in the data.   
 
 % subsection ford_lidar_video_dataset_and_experimental_setup (end)
 
 \subsection{Preprocessing} % (fold)
 \label{sub:preprocessing}
 %image of LVF data with channels, patches and images(frames) denoted.
-At each video frame timestep, the inputs to our model consisted of C-channels of data with C ranging from 3-6 channels. Channels consisted of inputs that included greyscale and (R,G,B)-video channels, horizontal and vertical components of optical flow computed from two consecutive frames and Lidar depth information. Each channel was cropped to a uniform 800x??? pixels. Each time step has an 800 x ??? x C array of integer values.
+At each video frame timestep, the inputs to our model consisted of C-channels of data with C ranging from 3-6 channels. Channels consisted of inputs that included greyscale and (R,G,B)-video channels, horizontal and vertical optical flow and Lidar depth information. Each channel was cropped to a uniform 800x250 pixels. Each time step has an 800 x 250 x C array of integer values.
 
 These arrays were subdivided into p x p x C patches at a prescribed stride. For any experiment we can denote the preprocessing parameters 
 \begin{itemize}
@@ -145,7 +143,17 @@ In order to accurately detect misalignment in the LV sensor data, we've assumed 
 
 % section problem_statement (end)
 
-\section{Model Description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model Description} % (fold)
+\label{sec:model_description}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.35]{Figures/lidar_dcnn_setup1.pdf}
+    \caption{Experimental setup of the LIDAR-Video DCNN}
+    \label{fig:Figures_lidar_dcnn_setup1}
+\end{figure}
+
 \textbf{need to describe the parameters post-processing,classification metric for each patch,a table with common params for the experiments would help,voting scheme}
 
 The model consists of a 4-layer \textbf{?} CNN classifier \textit{see image of network} that estimates the offset between the LV inputs at each time step. For each patch within a timestep, there are O variants with the LVF inputs offset by the predetermined amounts. The CNN outputs to a softmax layer, thereby providing an offset classification value for each patch of the frame. 
@@ -154,8 +162,17 @@ figure x: In the 5 class example we color each patch of the frame with a color c
 
 For each frame a simple voting scheme is used to aggregate the patch level offset predictions to frame level predictions. A sample histogram of the patch level predictions is show in figure x.
 
-\subsection{optical flow} \textit{kishore, please discuss the motivation to include dynamics, how we performed it and how we'd need to do it if running in real time. this is where we can point ot proof that it improves prediction.}
-Optical flow gives a rough estimate of velocity at each pixel given two consecutive frames. Given a stationary scene, the optical flow between two consecutive frames with small motion depends on the distance of the pixel from the camera. For example, closer the pixel, higher the displacement. We intent to use optical flow obtained from video as a proxy for depth. \cite{Opticalflow_realtime} demonstrated that optical flow can be performed in real-time on FPGA and GPU architectures. In our work, we used the algorithm described in \cite{LiuOpticalFlow} for computing optical flow.
+\subsection{Optical Flow} % (fold)
+\label{sub:optical_flow}
+\textit{kishore, please discuss the motivation to include dynamics, how we performed it and how we'd need to do it if running in real time. this is where we can point ot proof that it improves prediction.}
+
+Optical flow gives a rough estimate of velocity at each pixel given two consecutive frames. Given a stationary scene, the optical flow between two consecutive frames with small motion depends on the distance of the pixel from the camera. For example, closer the pixel, higher the displacement. We intent to use optical flow obtained from video as a proxy for depth. \cite{Chase2008Real-Time-} demonstrated that optical flow can be performed in real-time on FPGA and GPU architectures. In our work, we used the algorithm described in \cite{Liu2009Beyond-Pix} for computing optical flow.
+
+
+% subsection optical_flow (end)
+% section model_description (end)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experiments and Post-processing} % (fold)
 \label{sec:experiments_and_post_processing}
@@ -164,23 +181,32 @@ images to visualize the frame level results
 please place any confusion matrices and your comments on what you think the results say.
 feel free to suggest any tables or other visuals to include.}
 
-\subsection{5 class tests}
+
+
+
+\subsection{5 class tests} % (fold)
+\label{sub:5_class_tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
 In our initial tests, the linearly distributed set of 5 offsets of the LV data were performed. Table 1 lists the inputs and CNN parameters explored ranked in the order of increasing accuracy \textbf{(define accuracy and other cm metrics), include training vs test error and conf mats if room allows}.  
 
 As can be seen ... 
+% subsection 5_class_tests (end)
 
-\subsection{9 class tests}
+
+\subsection{9 class tests} % (fold)
+\label{sub:9_class_tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
 The subsequent tests were designed to understand whether the simple linear displacement model of the 5-class test could be generalized to a model capable of discriminating multiple directions and displacement magnitude. To achieve this 8 positions were chosen on an ellipse along with it's center \textbf{describe the parabola}. LV was offset in a manner similar to the 5 class test. Nine training and test sets were generated and an identical patch level CNN was constructed differing only in the 9 class softmax output layer. 
 
 Table 2 lists the inputs and CNN parameters explored ranked in the order of increasing accuracy \textbf{(define accuracy and other cm metrics), include training vs test error and conf mats if room allows}.  
 
  \textbf{Discussion: what results confirmed expectations or surprised us (grey scale). Can we confidently say optical flow improves prediction. }
-
+% subsection 9_class_tests (end)
 
 % section experiments_and_post_processing (end)
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and Future Work} % (fold)
 \label{sec:conclusions_and_future_work}
 We did it. We're great.
@@ -190,6 +216,7 @@ future: implement a method that doesn't require ground truth and also generalize
 % section conclusions_and_future_work (end)
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{references}
 populate the papers to be cited in the folder and if possible the bib file
 
