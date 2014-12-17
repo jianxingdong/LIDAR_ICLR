@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.28)  17 DEC 2014 05:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.28)  17 DEC 2014 06:35
 entering extended mode
-**C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v2MG.tex
-(C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v2MG.tex
+**C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v1.tex
+(C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v1.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -236,219 +236,266 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 \Gin@req@height=\dimen110
 \Gin@req@width=\dimen111
 )
-No file LVF_iclr2015_v2MG.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip55
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen112
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen113
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count104
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count105
+\leftroot@=\count106
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count107
+\DOTSCASE@=\count108
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen114
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count109
+\c@MaxMatrixCols=\count110
+\dotsspace@=\muskip11
+\c@parentequation=\count111
+\dspbrk@lvl=\count112
+\tag@help=\toks17
+\row@=\count113
+\column@=\count114
+\maxfields@=\count115
+\andhelp@=\toks18
+\eqnshift@=\dimen115
+\alignsep@=\dimen116
+\tagshift@=\dimen117
+\tagwidth@=\dimen118
+\totwidth@=\dimen119
+\lineht@=\dimen120
+\@envbody=\toks19
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
+LaTeX Info: The control sequence `\[' is already robust on input line 471.
+LaTeX Info: The control sequence `\]' is already robust on input line 472.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\was\gensymb.sty"
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v1.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 30.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\AtBeginShipoutBox=\box28
+\AtBeginShipoutBox=\box30
 
 (C:\Users\giering\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen112
-\scratchbox=\box29
-\nofMPsegments=\count105
-\nofMParguments=\count106
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen113
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
-\everyMPtoPDFconversion=\toks16
+\scratchcounter=\count116
+\scratchdimen=\dimen121
+\scratchbox=\box31
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen122
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks22
 )
-Package hyperref Info: Link coloring OFF on input line 28.
+Package hyperref Info: Link coloring OFF on input line 30.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count110
+\c@section@level=\count122
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
+
+(C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v1.out)
+(C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v1.out)
 \@outlinefile=\write3
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 32.
+LaTeX Info: Redefining \celsius on input line 30.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 30.
+
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 30.
+Package gensymb Info: Using \Omega for \ohm on input line 30.
+
+Package gensymb Warning: Not defining \micro.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
 
+Underfull \vbox (badness 6893) has occurred while \output is active []
 
-Package natbib Warning: Citation `Bodensteiner2012Real-time-' on page 1 undefin
-ed on input line 40.
-
-
-Package natbib Warning: Citation `Thrun2011Googles-dr' on page 1 undefined on i
-nput line 63.
-
-[1{C:/Users/giering/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{C:/Users/giering/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
+<Figures/ford-truck-sensors.png, id=75, 653.8026pt x 244.7544pt>
+File: Figures/ford-truck-sensors.png Graphic file (type png)
 
-Package natbib Warning: Citation `Ngiam2011Multimodal' on page 2 undefined on i
-nput line 66.
+<use Figures/ford-truck-sensors.png>
+Package pdftex.def Info: Figures/ford-truck-sensors.png used on input line 103.
 
-
-Package natbib Warning: Citation `Kim2013Deep-Learn' on page 2 undefined on inp
-ut line 66.
-
-
-Package natbib Warning: Citation `Srivastava2012Multimodal' on page 2 undefined
- on input line 66.
-
-
-Package natbib Warning: Citation `Lenz2013Deep-Learn' on page 2 undefined on in
-put line 66.
+(pdftex.def)             Requested size: 294.20845pt x 110.13844pt.
+ [2 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford-truck-sensors.pn
+g>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 110.
 
 
-Package natbib Warning: Citation `Pandey2011Ford-campu' on page 2 undefined on 
-input line 91.
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 93.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
 
-<Figures/ford-truck-sensors.png, id=14, 653.8026pt x 244.7544pt>
-File: Figures/ford-truck-sensors.png Graphic file (type png)
-
-<use Figures/ford-truck-sensors.png>
-Package pdftex.def Info: Figures/ford-truck-sensors.png used on input line 107.
-
-(pdftex.def)             Requested size: 294.20845pt x 110.13844pt.
-
-
-Package natbib Warning: Citation `Pandey2011Ford-campu' on page 2 undefined on 
-input line 108.
-
-
-Package natbib Warning: Citation `Pandey2011Ford-campu' on page 2 undefined on 
-input line 108.
-
-
-Package natbib Warning: Citation `Pandey2011Ford-campu' on page 2 undefined on 
-input line 108.
-
-
-Package natbib Warning: Citation `Pandey2011Ford-campu' on page 2 undefined on 
-input line 108.
-
-
-Package natbib Warning: Citation `Pandey2011Ford-campu' on page 2 undefined on 
-input line 112.
-
-
-LaTeX Warning: Reference `fig:ford-truck-sensors' on page 2 undefined on input 
-line 112.
-
-<Figures/ford_train_test_track.jpg, id=16, 631.60968pt x 367.3725pt>
+<Figures/ford_train_test_track.jpg, id=92, 631.60968pt x 367.3725pt>
 File: Figures/ford_train_test_track.jpg Graphic file (type jpg)
 
 <use Figures/ford_train_test_track.jpg>
 Package pdftex.def Info: Figures/ford_train_test_track.jpg used on input line 1
-17.
+21.
 (pdftex.def)             Requested size: 221.0667pt x 128.58229pt.
 
-
-LaTeX Warning: Reference `fig:ford_train_test_track' on page 2 undefined on inp
-ut line 122.
-
-<Figures/lidar_dcnn_setup1.pdf, id=17, 1187.43625pt x 237.88875pt>
-File: Figures/lidar_dcnn_setup1.pdf Graphic file (type pdf)
-
-<use Figures/lidar_dcnn_setup1.pdf>
-Package pdftex.def Info: Figures/lidar_dcnn_setup1.pdf used on input line 126.
-(pdftex.def)             Requested size: 415.60892pt x 83.2623pt.
-
-Overfull \hbox (18.12393pt too wide) in paragraph at lines 126--127
- [][] 
- []
-
-
-Underfull \vbox (badness 1048) has occurred while \output is active []
-
- [2]
-[3 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford-truck-sensors.png
-> <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford_train_test_track.j
-pg> <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/lidar_dcnn_setup1.pdf
->] <Figures/ImagePatchChannel.jpg, id=123, 298.716pt x 172.84575pt>
+<Figures/ImagePatchChannel.jpg, id=94, 298.716pt x 172.84575pt>
 File: Figures/ImagePatchChannel.jpg Graphic file (type jpg)
 
 <use Figures/ImagePatchChannel.jpg>
-Package pdftex.def Info: Figures/ImagePatchChannel.jpg used on input line 156.
+Package pdftex.def Info: Figures/ImagePatchChannel.jpg used on input line 153.
 (pdftex.def)             Requested size: 194.16309pt x 112.34839pt.
- [4 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ImagePatchChannel.jpg
->]
-<Figures/OptFlow.jpg, id=131, 192.72pt x 65.64525pt>
+ [3 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford_train_test_track
+.jpg>]
+<Figures/OptFlow.jpg, id=104, 192.72pt x 65.64525pt>
 File: Figures/OptFlow.jpg Graphic file (type jpg)
  <use Figures/OptFlow.jpg>
-Package pdftex.def Info: Figures/OptFlow.jpg used on input line 183.
+Package pdftex.def Info: Figures/OptFlow.jpg used on input line 185.
 (pdftex.def)             Requested size: 163.81276pt x 55.7987pt.
 
+[4 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ImagePatchChannel.jpg>
+ <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/OptFlow.jpg>]
+<Figures/lidar_dcnn_setup1.pdf, id=122, 1187.43625pt x 237.88875pt>
+File: Figures/lidar_dcnn_setup1.pdf Graphic file (type pdf)
 
-Package natbib Warning: Citation `Opticalflow_realtime' on page 5 undefined on 
-input line 188.
+<use Figures/lidar_dcnn_setup1.pdf>
+Package pdftex.def Info: Figures/lidar_dcnn_setup1.pdf used on input line 205.
+(pdftex.def)             Requested size: 415.60892pt x 83.2623pt.
 
+Overfull \hbox (18.12393pt too wide) in paragraph at lines 205--206
+ [][] 
+ []
 
-Package natbib Warning: Citation `LiuOpticalFlow' on page 5 undefined on input 
-line 188.
-
-<Figures/ellipse.png, id=132, 211.992pt x 120.9318pt>
+<Figures/ellipse.png, id=123, 211.992pt x 120.9318pt>
 File: Figures/ellipse.png Graphic file (type png)
 
 <use Figures/ellipse.png>
-Package pdftex.def Info: Figures/ellipse.png used on input line 209.
+Package pdftex.def Info: Figures/ellipse.png used on input line 234.
 (pdftex.def)             Requested size: 180.19403pt x 102.7925pt.
 
+<Figures/Voting_5class.jpg, id=124, 461.92575pt x 83.71275pt>
+File: Figures/Voting_5class.jpg Graphic file (type jpg)
 
-LaTeX Warning: File `Figures/Voting 5 class.jpg' not found on input line 216.
+<use Figures/Voting_5class.jpg>
+Package pdftex.def Info: Figures/Voting_5class.jpg used on input line 241.
+(pdftex.def)             Requested size: 392.63873pt x 71.15616pt.
+ [5 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/lidar_dcnn_setup1.pdf
+>]
+(C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v1.bbl [6 <C:/Users/
+giering/Documents/GitHub/LIDAR_ICLR/Figures/ellipse.png> <C:/Users/giering/Docu
+ments/GitHub/LIDAR_ICLR/Figures/Voting_5class.jpg>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 272.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 272.
 
-
-! Package pdftex.def Error: File `Figures/Voting 5 class.jpg' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.216 ...s[scale=0.85]{Figures/Voting 5 class.jpg}
-                                                  
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.216 ...s[scale=0.85]{Figures/Voting 5 class.jpg}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
- 
+(C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 272.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 272.
+Package rerunfilecheck Info: File `LVF_iclr2015_v1.out' has not changed.
+(rerunfilecheck)             Checksum: F59AEE1701FDBFBC2D16454C5F8896F3;728.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 272.
+ ) 
 Here is how much of TeX's memory you used:
- 6058 strings out of 493921
- 87801 string characters out of 3144869
- 179571 words of memory out of 3000000
- 9292 multiletter control sequences out of 15000+200000
- 18525 words of font info for 32 fonts, out of 3000000 for 9000
+ 7092 strings out of 493921
+ 100971 string characters out of 3144869
+ 192993 words of memory out of 3000000
+ 10248 multiletter control sequences out of 15000+200000
+ 20224 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,11n,45p,1239b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 37i,12n,45p,1237b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on LVF_iclr2015_v1.pdf (7 pages, 2164844 bytes).
+PDF statistics:
+ 274 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+
