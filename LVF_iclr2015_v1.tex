@@ -150,7 +150,7 @@ For each frame a simple voting scheme is used to aggregate the patch level offse
 \label{sub:optical_flow}
 \textit{kishore, please discuss the motivation to include dynamics, how we performed it and how we'd need to do it if running in real time. this is where we can point ot proof that it improves prediction.}
 
-Optical flow gives a rough estimate of velocity at each pixel given two consecutive frames. Given a stationary scene, the optical flow between two consecutive frames with small motion depends on the distance of the pixel from the camera. For example, closer the pixel, higher the displacement. We intent to use optical flow obtained from video as a proxy for depth. \cite{Chase2008Real-Time-} demonstrated that optical flow can be performed in real-time on FPGA and GPU architectures. In our work, we used the algorithm described in \cite{Liu2009Beyond-Pix} for computing optical flow.
+Optical flow gives a rough estimate of velocity at each pixel given two consecutive frames. Given a stationary scene, the optical flow between two consecutive frames with small motion depends on the distance of the pixel from the camera. For example, closer the pixel, higher the displacement. We intent to use optical flow obtained from video as a proxy for depth. \cite{Chase2008Real-Time-} demonstrated that optical flow can be performed in real-time on FPGA and GPU architectures. In our work, we used the algorithm described in [\cite{Liu2009Beyond-Pix}] for computing optical flow.
 
 
 % subsection optical_flow (end)
