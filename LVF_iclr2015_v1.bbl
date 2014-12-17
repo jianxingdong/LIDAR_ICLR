@@ -1,0 +1,91 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bodensteiner \& Arens(2012)Bodensteiner and
+  Arens]{Bodensteiner2012Real-time-}
+Bodensteiner, Christoph and Arens, Michael.
+\newblock {Real-time 2D Video 3D LiDAR Registration}.
+\newblock In \emph{Pattern Recognition (ICPR), 2012 21st International
+  Conference on}, pp.\  2206--2209. IEEE, 2012.
+
+\bibitem[Chase et~al.(2008)Chase, Nelson, Bodily, Wei, and
+  Lee]{Chase2008Real-Time-}
+Chase, J., Nelson, B., Bodily, J., Wei, Zhaoyi, and Lee, Dah-Jye.
+\newblock {Real-Time Optical Flow Calculations on FPGA and GPU Architectures: A
+  Comparison Study}.
+\newblock In \emph{Field-Programmable Custom Computing Machines, 2008. FCCM
+  '08. 16th International Symposium on}, pp.\  173--182, April 2008.
+\newblock \doi{10.1109/FCCM.2008.24}.
+
+\bibitem[Kim et~al.(2013)Kim, Lee, and Provost]{Kim2013Deep-Learn}
+Kim, Yelin, Lee, Honglak, and Provost, Emily~Mower.
+\newblock {Deep Learning for Robust Feature Generation in Audiovisual Emotion
+  Recognition}.
+\newblock In \emph{Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE
+  International Conference on}, pp.\  3687--3691. IEEE, 2013.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton]{Krizhevsky2012Imagenet-C}
+Krizhevsky, Alex, Sutskever, Ilya, and Hinton, Geoffrey~E.
+\newblock {Imagenet Classification With Deep Convolutional Neural Networks}.
+\newblock In \emph{Advances in neural information processing systems}, pp.\
+  1097--1105, 2012.
+
+\bibitem[Lenz et~al.(2013)Lenz, Lee, and Saxena]{Lenz2013Deep-Learn}
+Lenz, Ian, Lee, Honglak, and Saxena, Ashutosh.
+\newblock {Deep Learning for Detecting Robotic Grasps}.
+\newblock \emph{arXiv preprint arXiv:1301.3592}, 2013.
+
+\bibitem[Liu(2009)]{Liu2009Beyond-Pix}
+Liu, Ce.
+\newblock \emph{{Beyond Pixels: Exploring New Representations and Applications
+  for Motion Analysis}}.
+\newblock PhD thesis, Massachusetts Institute of Technology, Cambridge, MA,
+  USA, 2009.
+\newblock AAI0822221.
+
+\bibitem[Ngiam et~al.(2011)Ngiam, Khosla, Kim, Nam, Lee, and
+  Ng]{Ngiam2011Multimodal}
+Ngiam, Jiquan, Khosla, Aditya, Kim, Mingyu, Nam, Juhan, Lee, Honglak, and Ng,
+  Andrew~Y.
+\newblock {Multimodal Deep Learning}.
+\newblock In \emph{Proceedings of the 28th International Conference on Machine
+  Learning (ICML-11)}, pp.\  689--696, 2011.
+
+\bibitem[{NVIDIA Inc.}(2012)]{NVIDIA-Inc.2012NVIDIAs-Ne}
+{NVIDIA Inc.}
+\newblock {NVIDIA's Next Generation CUDA Compute Architecture: Kepler TM
+  GK110}.
+\newblock Whitepaper, May 2012.
+
+\bibitem[Pandey et~al.(2011)Pandey, McBride, and Eustice]{Pandey2011Ford-campu}
+Pandey, Gaurav, McBride, James~R, and Eustice, Ryan~M.
+\newblock {Ford Campus Vision And Lidar Data Set}.
+\newblock \emph{The International Journal of Robotics Research}, 30\penalty0
+  (13):\penalty0 1543--1552, 2011.
+
+\bibitem[Srivastava \& Salakhutdinov(2012)Srivastava and
+  Salakhutdinov]{Srivastava2012Multimodal}
+Srivastava, Nitish and Salakhutdinov, Ruslan.
+\newblock {Multimodal Learning With Deep Boltzmann Machines}.
+\newblock In \emph{Advances in neural information processing systems}, pp.\
+  2222--2230, 2012.
+
+\bibitem[Thrun(2011)]{Thrun2011Googles-dr}
+Thrun, Sebastian.
+\newblock {Google's driverless car}.
+\newblock \emph{Ted Talk, Ed}, 2011.
+
+\bibitem[Venugopal \& Kannan(2013)Venugopal and
+  Kannan]{Venugopal2013Accelerati}
+Venugopal, Vivek and Kannan, Suresh.
+\newblock Accelerating real-time lidar data processing using gpus.
+\newblock In \emph{Circuits and Systems (MWSCAS), 2013 IEEE 56th International
+  Midwest Symposium on}, pp.\  1168--1171, August 2013.
+\newblock \doi{10.1109/MWSCAS.2013.6674861}.
+
+\end{thebibliography}
