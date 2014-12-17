@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -20,6 +20,15 @@ Chase, J., Nelson, B., Bodily, J., Wei, Zhaoyi, and Lee, Dah-Jye.
 \newblock In \emph{Field-Programmable Custom Computing Machines, 2008. FCCM
   '08. 16th International Symposium on}, pp.\  173--182, April 2008.
 \newblock \doi{10.1109/FCCM.2008.24}.
+
+\bibitem[Chien et~al.(2002)Chien, Ma, and Chen]{Shao2002-seg-OF}
+Chien, Shao-Yi, Ma, Shyh-Yih, and Chen, Liang-Gee.
+\newblock Efficient moving object segmentation algorithm using background
+  registration technique.
+\newblock \emph{Circuits and Systems for Video Technology, IEEE Transactions
+  on}, 12\penalty0 (7):\penalty0 577--586, Jul 2002.
+\newblock ISSN 1051-8215.
+\newblock \doi{10.1109/TCSVT.2002.800516}.
 
 \bibitem[Kim et~al.(2013)Kim, Lee, and Provost]{Kim2013Deep-Learn}
 Kim, Yelin, Lee, Honglak, and Provost, Emily~Mower.
@@ -68,6 +77,23 @@ Pandey, Gaurav, McBride, James~R, and Eustice, Ryan~M.
 \newblock \emph{The International Journal of Robotics Research}, 30\penalty0
   (13):\penalty0 1543--1552, 2011.
 
+\bibitem[Prazdny(1980)]{Prazdny1980-egomotion-OF}
+Prazdny, K.
+\newblock Egomotion and relative depth map from optical flow.
+\newblock \emph{Biological Cybernetics}, 36\penalty0 (2):\penalty0 87--102,
+  1980.
+\newblock ISSN 0340-1200.
+\newblock \doi{10.1007/BF00361077}.
+\newblock URL \url{http://dx.doi.org/10.1007/BF00361077}.
+
+\bibitem[Shahraray \& Brown(1988)Shahraray and
+  Brown]{Shahraray1988-depthestimation-OF}
+Shahraray, B. and Brown, M.K.
+\newblock Robust depth estimation from optical flow.
+\newblock In \emph{Computer Vision., Second International Conference on}, pp.\
+  641--650, Dec 1988.
+\newblock \doi{10.1109/CCV.1988.590045}.
+
 \bibitem[Srivastava \& Salakhutdinov(2012)Srivastava and
   Salakhutdinov]{Srivastava2012Multimodal}
 Srivastava, Nitish and Salakhutdinov, Ruslan.
@@ -87,5 +113,13 @@ Venugopal, Vivek and Kannan, Suresh.
 \newblock In \emph{Circuits and Systems (MWSCAS), 2013 IEEE 56th International
   Midwest Symposium on}, pp.\  1168--1171, August 2013.
 \newblock \doi{10.1109/MWSCAS.2013.6674861}.
+
+\bibitem[{Yang} et~al.(2012){Yang}, {Liu}, {Ji}, and
+  {Gao}]{Yang2012-reconstruction-OF}
+{Yang}, Y., {Liu}, Q., {Ji}, R., and {Gao}, Y.
+\newblock {Dynamic 3D Scene Depth Reconstruction via Optical Flow Field
+  Rectification}.
+\newblock \emph{PLoS ONE}, 7:\penalty0 47041, November 2012.
+\newblock \doi{10.1371/journal.pone.0047041}.
 
 \end{thebibliography}
