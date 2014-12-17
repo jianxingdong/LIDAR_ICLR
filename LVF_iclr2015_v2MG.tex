@@ -60,16 +60,16 @@ By including optical flow as input channels, we imbue the nnet with information 
 Kishore here
 
 %%Multimodal data fusion
-A great amount has been published on various multimodal fusion methods. The most common approach taken is to generate features of interest in each modality such as lines and create a decision support mechanism that aggregates the outputs across modalities. If spatial alignment is required across modalities, as it is for LiDAR/ video such filter methods \cite{Thrun2011Googles-dr} are required to ensure the registration across modalities. These filter methods for leveraging 3D LiDAR and 2D images are geometric in nature and make use of projections between the different data spaces. 
+A great amount has been published on various multimodal fusion methods. The most common approach taken is to generate features of interest in each modality such as lines and create a decision support mechanism that aggregates the outputs across modalities. If spatial alignment is required across modalities, as it is for LiDAR/ video such filter methods \cite{Thrun2011Googles-dr} are required to ensure the registration across modalities. These filter methods for leveraging 3D LiDAR and 2D images are often geometric in nature and make use of projections between the different data spaces. 
 
 
 %%DL multimodal data fusion with CNN's
 
-In recent years, a number of papers have been written on the topic of using deep neural networks to analyze multimodal sensor inputs including audio/video \cite{Ngiam2011Multimodal} \cite{Kim2013Deep-Learn}, image/text \cite{Srivastava2012Multimodal}, image/depth \cite{Lenz2013Deep-Learn} and Lidar/video. To the best of our knowledge the use of multimodal deep neural networks for dynamic real time LIDAR/video registration has not been presented.
+The use of deep neural networks to analyze multimodal sensor inputs  has increased sharply in the last couple of years, including audio/video \cite{Ngiam2011Multimodal} \cite{Kim2013Deep-Learn}, image/text \cite{Srivastava2012Multimodal}, image/depth \cite{Lenz2013Deep-Learn} and Lidar/video. To the best of our knowledge the use of multimodal deep neural networks for dynamic real time LIDAR/video registration has not been presented.
 
 A common question often arises in data fusion methods, which is "at what level should features from the differing sensor streams be brought together?" Most similar to the more traditional data fusion methods is to train DNN's independently on sensor modalities and then use the high-level outputs of those networks as inputs to a subsequent DNN. This is analogous to the earlier example of learning 3D/2D features and subsequently identifying common geometric features. 
 
-It is possible however to apply DNN's in a more agnostic view enabling a unified set of features to be learned across multimodal data. In these cases the input channels aren't differentiated. Unsupervised methods in particular applying DBM's for learning such joint representations have been successful.  
+It is possible however to apply DNN's with a more agnostic view enabling a unified set of features to be learned across multimodal data. In these cases the input channels aren't differentiated. Unsupervised methods in particular applying DBM's for learning such joint representations have been successful.  
 
 DCNN's enable a similar agnostic approach to input channels. A significant difference of course is that target data is required to train them as classifiers. \emph{find examples in the literature}. This is the approach chosen by us for automating the registration of LiDAR/video/optical-flow, in which we are combining 1D/3D/2D data representations to learn a unified model across all 6D. 
 
@@ -179,6 +179,14 @@ figure x: In the 5 class example we color each patch of the frame with a color c
 For each frame a simple voting scheme is used to aggregate the patch level offset predictions to frame level predictions. A sample histogram of the patch level predictions is show in figure x.
 
 \subsection{optical flow} \textit{kishore, please discuss the motivation to include dynamics, how we performed it and how we'd need to do it if running in real time. this is where we can point ot proof that it improves prediction.}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.85]{Figures/OptFlow.jpg}
+    \caption{Placeholder: Visualization of the horizontal channel of the optical flow}
+    \label{fig:Figures_OptFlow placeholder}
+\end{figure}
+
 Optical flow gives a rough estimate of velocity at each pixel given two consecutive frames. Given a stationary scene, the optical flow between two consecutive frames with small motion depends on the distance of the pixel from the camera. For example, closer the pixel, higher the displacement. We intent to use optical flow obtained from video as a proxy for depth. \cite{Opticalflow_realtime} demonstrated that optical flow can be performed in real-time on FPGA and GPU architectures. In our work, we used the algorithm described in \cite{LiuOpticalFlow} for computing optical flow.
 
 \section{Experiments and Post-processing} % (fold)
@@ -197,6 +205,20 @@ As can be seen ...
 \subsection{9 class tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
 The subsequent tests were designed to understand whether the simple linear displacement model of the 5-class test could be generalized to a model capable of discriminating multiple directions and displacement magnitude. To achieve this 8 positions were chosen on an ellipse along with it's center \textbf{describe the parabola}. LV was offset in a manner similar to the 5 class test. Nine training and test sets were generated and an identical patch level CNN was constructed differing only in the 9 class softmax output layer. 
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.85]{Figures/ellipse.png}
+    \caption{Placeholder: Visualization of the LiDAR / video channel relative offsets}
+    \label{fig:Figures_Ellipse}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.85]{Figures/Voting 5 class.jpg}
+    \caption{Placeholder: Voting}
+    \label{fig:Figures_Voting}
+\end{figure}
 
 Table 2 lists the inputs and CNN parameters explored ranked in the order of increasing accuracy \textbf{(define accuracy and other cm metrics), include training vs test error and conf mats if room allows}.  
 
