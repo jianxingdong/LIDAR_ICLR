@@ -60,12 +60,10 @@ By including optical flow as input channels, we imbue the nnet with information 
 Kishore here
 
 %%Multimodal data fusion
-A great amount has been published on various multimodal fusion methods. The most common approach taken is to generate features of interest in each modality such as lines and create a decision support mechanism that aggregates the outputs across modalities. If spatial alignment is required across modalities, as it is for LiDAR/ video such filter methods \cite{Thrun2011Googles-dr} are required to ensure the registration across modalities. These filter methods for leveraging 3D LiDAR and 2D images are often geometric in nature and make use of projections between the different data spaces. 
-
+A great amount has been published on various multimodal fusion methods. The most common approach taken is to generate features of interest in each modality such as lines and create a decision support mechanism that aggregates the output features across modalities. If spatial alignment is required across modalities, as it is for LiDAR/ video such filter methods \cite{Thrun2011Googles-dr} are required to ensure the registration across modalities. These filter methods for leveraging 3D LiDAR and 2D images are most often geometric in nature and make use of projections between the different data spaces. 
 
 %%DL multimodal data fusion with CNN's
-
-The use of deep neural networks to analyze multimodal sensor inputs  has increased sharply in the last couple of years, including audio/video \cite{Ngiam2011Multimodal} \cite{Kim2013Deep-Learn}, image/text \cite{Srivastava2012Multimodal}, image/depth \cite{Lenz2013Deep-Learn} and Lidar/video. To the best of our knowledge the use of multimodal deep neural networks for dynamic real time LIDAR/video registration has not been presented.
+The use of deep neural networks to analyze multimodal sensor inputs  has increased sharply in the last couple of years, including audio/video \cite{Ngiam2011Multimodal} \cite{Kim2013Deep-Learn}, image/text \cite{Srivastava2012Multimodal}, image/depth \cite{Lenz2013Deep-Learn} and Lidar/video. To the best of our knowledge the use of multimodal deep neural networks for real time LIDAR/video registration has not been presented.
 
 A common question often arises in data fusion methods, which is "at what level should features from the differing sensor streams be brought together?" Most similar to the more traditional data fusion methods is to train DNN's independently on sensor modalities and then use the high-level outputs of those networks as inputs to a subsequent DNN. This is analogous to the earlier example of learning 3D/2D features and subsequently identifying common geometric features. 
 

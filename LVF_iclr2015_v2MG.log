@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.28)  16 DEC 2014 19:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.28)  16 DEC 2014 20:01
 entering extended mode
 **C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v2MG.tex
 (C:/Users/giering/Documents/GitHub/LIDAR_ICLR/LVF_iclr2015_v2MG.tex
@@ -297,19 +297,19 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
  [1{C:/Users/giering/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 95.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 93.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
 
 <Figures/ford-truck-sensors.png, id=75, 653.8026pt x 244.7544pt>
 File: Figures/ford-truck-sensors.png Graphic file (type png)
 
 <use Figures/ford-truck-sensors.png>
-Package pdftex.def Info: Figures/ford-truck-sensors.png used on input line 109.
+Package pdftex.def Info: Figures/ford-truck-sensors.png used on input line 107.
 
 (pdftex.def)             Requested size: 294.20845pt x 110.13844pt.
 
@@ -318,67 +318,63 @@ File: Figures/ford_train_test_track.jpg Graphic file (type jpg)
 
 <use Figures/ford_train_test_track.jpg>
 Package pdftex.def Info: Figures/ford_train_test_track.jpg used on input line 1
-19.
+17.
 (pdftex.def)             Requested size: 221.0667pt x 128.58229pt.
 
 <Figures/lidar_dcnn_setup1.pdf, id=90, 1187.43625pt x 237.88875pt>
 File: Figures/lidar_dcnn_setup1.pdf Graphic file (type pdf)
 
 <use Figures/lidar_dcnn_setup1.pdf>
-Package pdftex.def Info: Figures/lidar_dcnn_setup1.pdf used on input line 128.
+Package pdftex.def Info: Figures/lidar_dcnn_setup1.pdf used on input line 126.
 (pdftex.def)             Requested size: 415.60892pt x 83.2623pt.
 
-Overfull \hbox (18.12393pt too wide) in paragraph at lines 128--129
+Overfull \hbox (18.12393pt too wide) in paragraph at lines 126--127
  [][] 
  []
 
-
-Underfull \vbox (badness 1048) has occurred while \output is active []
-
- [2]
-[3 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford-truck-sensors.png
-> <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford_train_test_track.j
-pg> <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/lidar_dcnn_setup1.pdf
->] <Figures/ImagePatchChannel.jpg, id=201, 298.716pt x 172.84575pt>
+[2] [3 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford-truck-sensors
+.png> <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ford_train_test_tra
+ck.jpg> <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/lidar_dcnn_setup1
+.pdf>] <Figures/ImagePatchChannel.jpg, id=201, 298.716pt x 172.84575pt>
 File: Figures/ImagePatchChannel.jpg Graphic file (type jpg)
 
 <use Figures/ImagePatchChannel.jpg>
-Package pdftex.def Info: Figures/ImagePatchChannel.jpg used on input line 158.
+Package pdftex.def Info: Figures/ImagePatchChannel.jpg used on input line 156.
 (pdftex.def)             Requested size: 194.16309pt x 112.34839pt.
 
 <Figures/OptFlow.jpg, id=202, 192.72pt x 65.64525pt>
 File: Figures/OptFlow.jpg Graphic file (type jpg)
  <use Figures/OptFlow.jpg>
-Package pdftex.def Info: Figures/OptFlow.jpg used on input line 185.
+Package pdftex.def Info: Figures/OptFlow.jpg used on input line 183.
 (pdftex.def)             Requested size: 163.81276pt x 55.7987pt.
 
 
 Package natbib Warning: Citation `Opticalflow_realtime' on page 4 undefined on 
-input line 190.
+input line 188.
 
 
 Package natbib Warning: Citation `LiuOpticalFlow' on page 4 undefined on input 
-line 190.
+line 188.
 
 [4 <C:/Users/giering/Documents/GitHub/LIDAR_ICLR/Figures/ImagePatchChannel.jpg>
 ] <Figures/ellipse.png, id=208, 211.992pt x 120.9318pt>
 File: Figures/ellipse.png Graphic file (type png)
 
 <use Figures/ellipse.png>
-Package pdftex.def Info: Figures/ellipse.png used on input line 211.
+Package pdftex.def Info: Figures/ellipse.png used on input line 209.
 (pdftex.def)             Requested size: 180.19403pt x 102.7925pt.
 
 
-LaTeX Warning: File `Figures/Voting 5 class.jpg' not found on input line 218.
+LaTeX Warning: File `Figures/Voting 5 class.jpg' not found on input line 216.
 
 <Figures/Voting 5 class.jpg, id=209, 461.92575pt x 83.71275pt>
 File: Figures/Voting 5 class.jpg Graphic file (type jpg)
 
 <use Figures/Voting 5 class.jpg>
-Package pdftex.def Info: Figures/Voting 5 class.jpg used on input line 218.
+Package pdftex.def Info: Figures/Voting 5 class.jpg used on input line 216.
 (pdftex.def)             Requested size: 392.63873pt x 71.15616pt.
 
-Overfull \hbox (39.8732pt too wide) in paragraph at lines 218--219
+Overfull \hbox (39.8732pt too wide) in paragraph at lines 216--217
  [][] 
  []
 
@@ -389,15 +385,15 @@ uments/GitHub/LIDAR_ICLR/Figures/Voting 5 class.jpg>]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
 [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
  (C:\Users\giering\Documents\GitHub\LIDAR_ICLR\LVF_iclr2015_v2MG.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 246.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
 Package rerunfilecheck Info: File `LVF_iclr2015_v2MG.out' has not changed.
 (rerunfilecheck)             Checksum: A74AF3DCBCF0D5F708909633A22E5A44;728.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
  ) 
 Here is how much of TeX's memory you used:
  6132 strings out of 493921
@@ -413,7 +409,7 @@ Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on LVF_iclr2015_v2MG.pdf (6 pages, 2142371 bytes).
+Output written on LVF_iclr2015_v2MG.pdf (6 pages, 2142388 bytes).
 PDF statistics:
  249 PDF objects out of 1000 (max. 8388607)
  34 named destinations out of 1000 (max. 500000)
