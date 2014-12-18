@@ -21,7 +21,7 @@
 Decision Support \& Machine Intelligence Group \\
 United Technologies Research Center\\
 E. Hartford, CT 06060, USA \\
-Email: \{gierinmj, kkreddy, venugov\}@utrc.utc.com}
+Email: \{gierinmj, reddykk, venugov\}@utrc.utc.com}
 
 
 \newcommand{\fix}{\marginpar{FIX}}
@@ -100,7 +100,7 @@ Being able to detect and correct the misalignment (registration, calibration) am
     \label{fig:ford-truck-sensors}
 \end{figure}
 
-The FORD LiDAR-video dataset \cite{Pandey2011Ford-campu} is collected by an autonomous Ford F-250 vehicle integrated with the following perception and navigation sensors as shown in Figure \ref{fig:ford-truck-sensors}:
+The FORD LiDAR-video dataset \cite{Pandey2011Ford-Campu} is collected by an autonomous Ford F-250 vehicle integrated with the following perception and navigation sensors as shown in Figure \ref{fig:ford-truck-sensors}:
 \begin{itemize}
     \item Velodyne HDL-64E LiDAR with two blocks of lasers spinning at 10 Hz and a maximum range of 120m.
     \item Point Grey Ladybug3 omni-directional camera system with six 2-Mega-pixel cameras collecting video data at 8fps with $1600\times1600$ resolution.
@@ -145,7 +145,7 @@ Preprocessing is repeated \emph{N} times, where \emph{N} is the number of offset
     \centering
     \subfigure[Visualization of the elliptically distributed $N=9$ classes]
     {
-        \includegraphics[scale=0.85]{Figures/ellipse.png}
+        \includegraphics[scale=0.3]{Figures/ellipse_final.png}
         \label{fig:Figures_Ellipse}
     }
     \hspace{0.5cm}
@@ -202,24 +202,27 @@ feel free to suggest any tables or other visuals to include.}
 
 
 
-\subsection{5 class tests} % (fold)
-\label{sub:5_class_tests}
+%\subsection{5 class tests} % (fold)
+%\label{sub:5_class_tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
-In our initial tests, the linearly distributed set of 5 offsets of the LiDAR-video data were performed. Table 1 lists the inputs and CNN parameters explored ranked in the order of increasing accuracy \textbf{(define accuracy and other cm metrics), include training vs test error and conf mats if room allows}.  
+%In our initial tests, the linearly distributed set of 5 offsets of the LiDAR-video data were performed. Table 1 lists the inputs and CNN parameters explored ranked in the order of increasing accuracy \textbf{(define accuracy and other cm metrics), include training vs test error and conf mats if room allows}.  
 
-As can be seen ... 
+%As can be seen ... 
 % subsection 5_class_tests (end)
 
 
-\subsection{9 class tests} % (fold)
+\subsection{Elliptically distributed offsets} % (fold)
+%\subsection{9 class tests} % (fold
 \label{sub:9_class_tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
-The subsequent tests were designed to understand whether the simple linear displacement model of the 5-class test could be generalized to a model capable of discriminating multiple directions and displacement magnitude. To achieve this 8 positions were chosen on an ellipse along with it's center \textbf{describe the parabola}. LiDAR-video was offset in a manner similar to the 5 class test. Nine training and test sets were generated and an identical patch level CNN was constructed differing only in the 9 class softmax output layer. 
+%The subsequent tests were designed to understand whether the simple linear displacement model of the 5-class test could be generalized to a model capable of discriminating multiple directions and displacement magnitude. To achieve this 8 positions were chosen on an ellipse along with it's center \textbf{describe the parabola}. LiDAR-video was offset in a manner similar to the 5 class test. Nine training and test sets were generated and an identical patch level CNN was constructed differing only in the 9 class softmax output layer. 
+
+In our experiments, elliptically distributed set of 9 offsets of the LiDAR-video data were considered. The LiDAR data is displaced along an ellipse with a major axis of 32 pixels and a minor axis of 16 rotated clockwise from x axis by 45 degrees as shown in Figure \ref{fig:Figures_Ellipse}. Separate training and testing sets were generated from two different tracks as shown in Figure \ref{fig:ford_train_test_track} for all the 9 offsets of LiDAR data.
 
 \begin{figure}[htbp]
     \centering
-        \includegraphics[scale=0.85]{Figures/Voting_5class.jpg}
-    \caption{Placeholder: Voting}
+        \includegraphics[scale=0.35]{Figures/Voting_final.png}
+    \caption{Left: Histogram of the classes detected by all patches. Right: Location of patches color coded with the detected class}
     \label{fig:Figures_Voting}
 \end{figure}
 
