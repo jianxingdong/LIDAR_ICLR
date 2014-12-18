@@ -34,8 +34,6 @@ Email: \{gierinmj, kkreddy, venugov\}@utrc.utc.com}
 
 \begin{abstract}
 
-%When performing multi-modal fusion to perform an analytic task, spatio-temporal registration of the incoming signals is often a prerequisit to analyzing the %fused data and critical to the stability of the analysis. Lidar-Video systems like on those many driverless cars are a common example of where keeping the %Lidar and video channels registered to common physical features is important. We develop a deep learning method that takes multiple channels of %heterogeneous data to detect the misalignment of the Lidar-video inputs. A number of variations were tested on the Ford LV driving test data set with %minimal tuning of the deep conv nets parameters. 
-
 The ability to simlutaneously leverage multiple modes of sensor information is critical for perception of an automated vehicle's physical surroundings. Spatio-temporal alignment of registration of the incoming information is often a prerequisist to analyzing the fused data. The persistance and reliability of multi-modal registration is therefore the key to the stability of decision support systems ingesting the fused information. LIDAR-Video systems like on those many driverless cars are a common example of where keeping the LIDAR and video channels registered to common physical features is important. We develop a deep learning method that takes multiple channels of heterogeneous data, to detect the misalignment of the LIDAR-video inputs.  A number of variations were tested on the Ford LV driving test data set and will be discussed. To the best of our knowledge the use of multimodal deep convolutional neural networks for dynamic real-time LIDAR-video registration has not been presented.
 
 \end{abstract}
@@ -47,13 +45,14 @@ The ability to simlutaneously leverage multiple modes of sensor information is c
 Navigation and situational awareness of optionally manned vehicles requires the integration of multiple sensing modalities such as LIght Detection and Ranging (LIDAR) and video, but could just as easily be extended to other modalities including RAdio Detection And Ranging (RADAR), Short-Wavelength Infrared (SWIR) and Global Positioning System (GPS). Spatio-temporal registration of information from multi-modal sensors is technically challenging in its own right. For many tasks such as pedestrian and object detection tasks that make use of multiple sensors, decision support methods rest on the assumption of proper registration. Most approaches \cite{Bodensteiner2012Real-time-} in LIDAR-video for instance, build separate vision and lidar feature extraction methods and identify common anchor points in both. Alternatively, by generating a single feature set on LIDAR, Video and optical flow, it enables the system to to capture mutual information among modalities more efficiently. The ability to dynamically register information from the available data channels for perception related tasks can alleviate the need for anchor points \emph{between} sensor modalities. We see auto-registration as a prerequisit need for operating on multi-modal information with confidence.
 
 %better fusion
-Deep neural networks lend themselves in a seamless manner for data fusion on time series data. It has been shown [Ng multimodal] for some challenges in which the modalities share significant mutual information, the features generated on the fused information can provide insight that neither input alone can. In effect the ML version of, "the whole is greater than the sum of it's parts". 
+Deep neural networks lend themselves in a seamless manner for data fusion on time series data. It has been shown \cite{Ngiam2011Multimodal} for some challenges in which the modalities share significant mutual information, the features generated on the fused information can provide insight that neither input alone can. In effect the ML version of, "the whole is greater than the sum of it's parts". 
 
 %speed constraints
-Speed constraints of real time navigation also constrain model selection. The trained nnets easily run within the real-time constraints of common frame rates and lidar data collection.
+Autonomous navigation places significant constraints on the speed of perception algorithms and their ability to drive decision making in real-time. Though computationally intensive to train, the run time speed of our implemented DCNN's run easily within real-time frame rates of \textbf{60 fps???}. 
 
 %Applied research perspective
-From an applied research perspective, it is possible to create such systems with far less overhead. The need for domain experts and hand-crafted feature design are lessened, thereby allowing more rapid prototyping and testing. 
+With most research in deep neural networks focused on algorithmic improvements and novel applications, a significant benefit to applied researchers is sometimes underappreciated. Feature generation
+as executed in DNNs enables us to create such systems with far less overhead. The need for domain experts and hand-crafted feature design are lessened, thereby allowing more rapid prototyping and testing. 
 
 %%probably in next steps
 The generalization of autoregistration across multiple assets is clearly a path to be explored. 
