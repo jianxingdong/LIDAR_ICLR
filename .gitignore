@@ -21,8 +21,5 @@
 *.mtc1
 *.out
 *.synctex.gz
-<<<<<<< Updated upstream
-LVF_iclr2015_v1.pdf
-=======
 *.lb
->>>>>>> Stashed changes
+
