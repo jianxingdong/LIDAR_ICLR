@@ -20,7 +20,7 @@
 Decision Support \& Machine Intelligence Group \\
 United Technologies Research Center\\
 E. Hartford, CT 06060, USA \\
-Email: {gierinmj, kkreddy, venugov}@utrc.utc.com}
+Email: \{gierinmj, kkreddy, venugov\}@utrc.utc.com}
 
 
 \newcommand{\fix}{\marginpar{FIX}}
@@ -36,7 +36,7 @@ Email: {gierinmj, kkreddy, venugov}@utrc.utc.com}
 
 %When performing multi-modal fusion to perform an analytic task, spatio-temporal registration of the incoming signals is often a prerequisit to analyzing the %fused data and critical to the stability of the analysis. Lidar-Video systems like on those many driverless cars are a common example of where keeping the %Lidar and video channels registered to common physical features is important. We develop a deep learning method that takes multiple channels of %heterogeneous data to detect the misalignment of the Lidar-video inputs. A number of variations were tested on the Ford LV driving test data set with %minimal tuning of the deep conv nets parameters. 
 
-The ability to simlutaneously leverage multiple modes of sensor information is critical for perception of an automated vehicle's physical surroundings. Spatio-temporal alignment of registration of the incoming information is often a prerequisist to analyzing the fused data. The persistance and reliability of multi-modal registration is therefore the key to the stability of decision support systems ingesting the fused information. Lidar-Video systems like on those many driverless cars are a common example of where keeping the Lidar and video channels registered to common physical features is important. We develop a deep learning method that takes multiple channels of heterogeneous data, to detect the misalignment of the Lidar-video inputs.  A number of variations were tested on the Ford LV driving test data set and will be discussed. To the best of our knowledge the use of multimodal deep convolutional neural networks for dynamic real-time LIDAR/video registration has not been presented.
+The ability to simlutaneously leverage multiple modes of sensor information is critical for perception of an automated vehicle's physical surroundings. Spatio-temporal alignment of registration of the incoming information is often a prerequisist to analyzing the fused data. The persistance and reliability of multi-modal registration is therefore the key to the stability of decision support systems ingesting the fused information. LIDAR-Video systems like on those many driverless cars are a common example of where keeping the LIDAR and video channels registered to common physical features is important. We develop a deep learning method that takes multiple channels of heterogeneous data, to detect the misalignment of the LIDAR-video inputs.  A number of variations were tested on the Ford LV driving test data set and will be discussed. To the best of our knowledge the use of multimodal deep convolutional neural networks for dynamic real-time LIDAR-video registration has not been presented.
 
 \end{abstract}
 
@@ -44,7 +44,7 @@ The ability to simlutaneously leverage multiple modes of sensor information is c
 \section{Motivation} % (fold)
 \label{sec:motivation}
 % please include other motivations
-Navigation and situational awareness of optionally manned vehicles requires the integration of multiple sensing modalities such as LIDAR and video, but could just as easily be extended to other modalities including Radar, SWIR and GPS. Spatio-temporal registration of information from multi-modal sensors is technically challenging in its own right. For many tasks such as pedestrian and object detection tasks that make use of multiple sensors, decision support methods rest on the assumption of proper registration. Most approaches \cite{Bodensteiner2012Real-time-} in LIDAR-video for instance, build separate vision and lidar feature extraction methods and identify common anchor points in both. Alternatively, by generating a single feature set on Lidar, Video and optical flow, it enables the system to to capture mutual information among modalities more efficiently. The ability to dynamically register information from the available data channels for perception related tasks can alleviate the need for anchor points \emph{between} sensor modalities. We see auto-registration as a prerequisit need for operating on multi-modal information with confidence.
+Navigation and situational awareness of optionally manned vehicles requires the integration of multiple sensing modalities such as LIght Detection and Ranging (LIDAR) and video, but could just as easily be extended to other modalities including RAdio Detection And Ranging (RADAR), Short-Wavelength Infrared (SWIR) and Global Positioning System (GPS). Spatio-temporal registration of information from multi-modal sensors is technically challenging in its own right. For many tasks such as pedestrian and object detection tasks that make use of multiple sensors, decision support methods rest on the assumption of proper registration. Most approaches \cite{Bodensteiner2012Real-time-} in LIDAR-video for instance, build separate vision and lidar feature extraction methods and identify common anchor points in both. Alternatively, by generating a single feature set on LIDAR, Video and optical flow, it enables the system to to capture mutual information among modalities more efficiently. The ability to dynamically register information from the available data channels for perception related tasks can alleviate the need for anchor points \emph{between} sensor modalities. We see auto-registration as a prerequisit need for operating on multi-modal information with confidence.
 
 %better fusion
 Deep neural networks lend themselves in a seamless manner for data fusion on time series data. It has been shown [Ng multimodal] for some challenges in which the modalities share significant mutual information, the features generated on the fused information can provide insight that neither input alone can. In effect the ML version of, "the whole is greater than the sum of it's parts". 
@@ -70,18 +70,22 @@ By including optical flow as input channels, we imbue the nnet with information 
 Kishore here
 
 %%Multimodal data fusion
+<<<<<<< Updated upstream
 A great amount has been published on various multimodal fusion methods. The most common approaches taken generate features of interest in each modality seperately and create a decision support mechanism that aggregates features across modalities. If spatial alignment is required across modalities, as it is for LiDAR/ video such filter methods \cite{Thrun2011Googles-dr} are required to ensure proper inter-modal registration. These filter methods for leveraging 3D LiDAR and 2D images are often geometric in nature and make use of projections between the different data spaces. 
+=======
+A great amount has been published on various multimodal fusion methods. The most common approach taken is to generate features of interest in each modality such as lines and create a decision support mechanism that aggregates the outputs across modalities. If spatial alignment is required across modalities, as it is for LIDAR-video such filter methods \cite{Thrun2011Googles-dr} are required to ensure the registration across modalities. These filter methods for leveraging 3D LIDAR and 2D images are often geometric in nature and make use of projections between the different data spaces. 
+>>>>>>> Stashed changes
 
 
 %%DL multimodal data fusion with CNN's
 
-The use of deep neural networks to analyze multimodal sensor inputs  has increased sharply in the last couple of years, including audio/video \cite{Ngiam2011Multimodal} \cite{Kim2013Deep-Learn}, image/text \cite{Srivastava2012Multimodal}, image/depth \cite{Lenz2013Deep-Learn} and Lidar/video. To the best of our knowledge the use of multimodal deep neural networks for dynamic real time LIDAR/video registration has not been presented.
+The use of deep neural networks to analyze multimodal sensor inputs  has increased sharply in the last couple of years, including audiR-video \cite{Ngiam2011Multimodal} \cite{Kim2013Deep-Learn}, image/text \cite{Srivastava2012Multimodal}, image/depth \cite{Lenz2013Deep-Learn} and LIDAR-video. To the best of our knowledge the use of multimodal deep neural networks for dynamic real time LIDAR-video registration has not been presented.
 
 A common question often arises in data fusion methods, which is "at what level should features from the differing sensor streams be brought together?" Most similar to the more traditional data fusion methods is to train DNN's independently on sensor modalities and then use the high-level outputs of those networks as inputs to a subsequent DNN. This is analogous to the earlier example of learning 3D/2D features and subsequently identifying common geometric features. 
 
 It is possible however to apply DNN's with a more agnostic view enabling a unified set of features to be learned across multimodal data. In these cases the input channels aren't differentiated. Unsupervised methods in particular applying DBM's for learning such joint representations have been successful.  
 
-DCNN's enable a similar agnostic approach to input channels. A significant difference is that target data is required to train them as classifiers. \emph{find examples in the literature}. This is the approach chosen by us for automating the registration of LiDAR/video/optical-flow, in which we are combining 1D/3D/2D data representations to learn a unified model across as many as 6D. 
+DCNN's enable a similar agnostic approach to input channels. A significant difference is that target data is required to train them as classifiers. \emph{find examples in the literature}. This is the approach chosen by us for automating the registration of LIDAR-video and optical-flow, in which we are combining 1D/3D/2D data representations to learn a unified model across as many as 6D. 
 
 
 % section previous_work (end)
@@ -90,8 +94,6 @@ DCNN's enable a similar agnostic approach to input channels. A significant diffe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem Statement} % (fold)
 \label{sec:problem_statement}
-% need detailed description and citation regarding the ford data set
-% need greater clarity on the optical flow method used.
 
 Being able to detect and correct the misalignment (registration, calibration) among sensors of the same or different kinds is critical when operating on the fused information emanating from them. For this work Deep Convolutional Neural Networks (DCNN) were implemented for the detection of small spatial misalignments in LIDAR and Video frames. The data collected from a driverless car was chosen as the multi-modal fusion test case. LIDAR-Video is a common combination for providing perception capabilities to many types of ground and airborne platforms including driverless cars \cite{Thrun2011Googles-dr}. 
 
@@ -114,8 +116,6 @@ The FORD LIDAR-Video dataset \cite{Pandey2011Ford-campu} is collected by an auto
     \item Xsens MTi-G sensor consisting of accelerometer, gyroscope, magnetometer, integrated GPS receiver, static pressure sensor and temperature sensor. It measures the GPS co-ordinates of the vehicle and also provides the 3D velocity and 3D rate of turn.
 \end{itemize}
 
-% \textbf{ Kishore -Detailed description of the ford data set [], our test and training and the justifications for it. framerate.Vivek - a brief description of the hardware used. }
-
 \begin{figure}[htbp]
     \centering
         \includegraphics[scale=0.35]{Figures/ford_train_test_track.jpg}
@@ -127,37 +127,67 @@ This dataset is generated by the vehicle while driving in and around the Ford re
 
 % subsection ford_lidar_video_dataset_and_experimental_setup (end)
 
+\subsection{Optical Flow} % (fold)
+\label{sub:optical_flow}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.85]{Figures/OpticalFlow_example_final.png}
+    \caption{Optical flow: Hue indicates orientation and saturation indicates magnitude}
+    \label{fig:Figures_OptFlow placeholder}
+\end{figure}
+
+In the area of navigation of mobile robots, optical flow has been widely used to estimate egomotion [\cite{Prazdny1980-egomotion-OF}], depth maps [\cite{Shahraray1988-depthestimation-OF}], reconstruct dynamic 3D scene depth [\cite{Yang2012-reconstruction-OF}], and segment moving objects [\cite{Shao2002-seg-OF}]. Optical flow gives an estimate of velocity at each pixel from two consecutive frames, denoted by $\vec{u}$ and $\vec{v}$. The motion field from these two frames is measured by the motion of the pixel brightness pattern, where the changes in image brightness is due to the camera or object motion. \cite{Liu2009Beyond-Pix} describes an algorithm for computing optical flow from images, which is used during the preprocessing step. Figure \ref{fig:Figures_OptFlow placeholder} shows an example of the optical flow computed using two consecutive frames from the Ford LIDAR-video dataset.
+
+
+% In our work we use optical flow as an additional channel derived from two consecutive frames to capture the dynamics. Optical flow gives an estimate of velocity at each pixel given two consecutive frames. \cite{Chase2008Real-Time-} demonstrated that optical flow can be performed in real-time on FPGA and GPU architectures. In our work, we used the algorithm described in [\cite{Liu2009Beyond-Pix}] for computing optical flow. Figure \ref{fig:Figures_OptFlow placeholder} shows an example of the optical flow obtained using two frames from Ford LV dataset.
+
+% subsection optical_flow (end)
+
 \subsection{Preprocessing} % (fold)
 \label{sub:preprocessing}
 %image of LVF data with channels, patches and images(frames) denoted.
-At each video frame timestep, the inputs to our model consisted of C-channels of data with C ranging from 3-6 channels. Channels consisted of inputs that included greyscale and (R,G,B)-video channels, horizontal and vertical components of optical flow and Lidar depth information. Each channel was cropped to a uniform 800x256 pixels. Each time step has an 800 x 256 x C array of integer values.
+At each video frame timestep, the inputs to our model consist of \emph{C} channels of data with \emph{C} ranging from 3-6 channels. Channels consist of grayscale \emph{Gr} or \emph{(R,G,B)} information from the video, horizontal and vertical components of optical flow \emph{(U,V)} and depth information \emph{L} from LIDAR. The data from each modality is reshaped to a fixed size of $800\times256$ values, which are partitioned into $p\times p$ patches at a prescribed stride as shown in Figure \ref{fig:ImageChStride}. Each patch $p\times p$ is stacked across \emph{C} channels, effectively generating a vector of \emph{C} dimensions. The different preprocessing parameters are denoted by patch size \emph{p}, stride \emph{s} and the number of input channels \emph{C}.
 
-These arrays were subdivided into p x p x C patches at a prescribed stride as shown in Figure \ref{fig:ImageChStride}. For any experiment we can denote the preprocessing parameters 
-\begin{itemize}
-\item R,G,B --- Frame color channels.
-\item W --- Grey color channel.
-\item U,V --- optical flow channels.
-\item L --- lidar depth channel.
-\item C --- number of input channels.
-\item p --- patch size.
-\item s --- stride.
-\end{itemize}  
-
-For a given frame of size 800 x h there are approximately n= (800 x h)/s patches (exact number?). The training and test sets had X and Y frames respectively, therefore the entire training data set consists of  N = n x X inputs of the patch-size dimension. 
-
-Preprocessing is repeated O times, where O is the number of offset classes. For this work we used two setups. A 5 class, linearly distributed set of offsets and a 9 class elliptically distributed set of offsets as shown in Figure \ref{fig:Figures_Ellipse}. For each offset class, the video (R,G,B) and optical flow (U,V) channels are kept static and the depth (L) channel from the lidar is moved by the offset simulating a misalignment between the video and the lidar sensors. At a given timestep, all n patches extracted from the C-channels for different offsets are grouped in to different classes for training purposes. The information from each channel for a given patch location are vectorised into a d=p x p x C dimension vector resulting in a nxd dimension matrix for each offset class at a given timestep.  
-%\textbf{Kishore explain how you generated the data.} 
-%figure showing offset classes. 
-
-%% image of Ford Data set marked with Testing and Training
 \begin{figure}[htbp]
-    %\centering
-        \includegraphics[scale=0.65]{Figures/ImagePatchChannel.jpg}
-    \caption{At each time step the channels were sampled at the noted patch size at a fixed stride}
+    \centering
+        \includegraphics[scale=0.65]{Figures/ImagePatchChannel.pdf}
+    \caption{Stacking of $p\times p$ patch over all the different channels}
     \label{fig:ImageChStride}
 \end{figure}
 
-In order to accurately detect misalignment in the Lidar and Video sensor data, we've assumed there needs to be a lower bound on the amount of information present in each channel. For this data set, L was the only channel with regions of low information. A preprocess step was to eliminate all patches corresponding to L data with variance less than a threshold (\textless x). This leads to the elimination of the majority of foreground patches in the data set, reducing the size of the training set by approximately 80\%. In the testing stage, the same threshold x is used to not perform classification on patches with less information.
+% Each channel was cropped to a uniform 800x256 pixels. Each time step has an 800 x 256 x C array of integer values.
+%
+% These arrays were subdivided into p x p x C patches at a prescribed stride as shown in Figure \ref{fig:ImageChStride}. For any experiment we can denote the preprocessing parameters
+% \begin{itemize}
+% \item R,G,B --- Frame color channels.
+% \item W --- Grey color channel.
+% \item U,V --- optical flow channels.
+% \item L --- lidar depth channel.
+% \item C --- number of input channels.
+% \item p --- patch size.
+% \item s --- stride.
+% \end{itemize}
+%
+% For a given frame of size 800 x h there are approximately n= (800 x h)/s patches (exact number?). The training and test sets had X and Y frames respectively, therefore the entire training data set consists of  N = n x X inputs of the patch-size dimension.
+
+Preprocessing is repeated \emph{N} times, where \emph{N} is the number of offset classes. Figure \ref{fig:Figures_Ellipse} shows a 9 class elliptically distributed set of offsets. For each offset class, the video (R,G,B) and optical flow (U,V) channels are kept static and the depth (L) channel from the lidar is moved by the offset simulating a misalignment between the video and the lidar sensors. 
+
+%At a given timestep, all n patches extracted from the C-channels for different offsets are grouped in to different classes for training purposes. The information from each channel for a given patch location are vectorised into a d=p x p x C dimension vector resulting in a nxd dimension matrix for each offset class at a given timestep.  
+%\textbf{Kishore explain how you generated the data.} 
+%figure showing offset classes. 
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[scale=0.85]{Figures/ellipse.png}
+    \caption{Visualization of the elliptically distributed 9 classes}
+    \label{fig:Figures_Ellipse}
+\end{figure}
+
+%% image of Ford Data set marked with Testing and Training
+
+
+In order to accurately detect misalignment in the LIDAR and Video sensor data, we've assumed there needs to be a lower bound on the amount of information present in each channel. For this data set, L was the only channel with regions of low information. A preprocess step was to eliminate all patches corresponding to L data with variance less than a threshold (\textless x). This leads to the elimination of the majority of foreground patches in the data set, reducing the size of the training set by approximately 80\%. In the testing stage, the same threshold x is used to not perform classification on patches with less information.
 %\textbf{z pct KISHORE}
 
 % subsection preprocessing (end)
@@ -170,7 +200,7 @@ In order to accurately detect misalignment in the Lidar and Video sensor data, w
 
 \textbf{need to describe the parameters post-processing,classification metric for each patch,a table with common params for the experiments would help,voting scheme}
 
-Our models for auto-registration are DCNN's trained to classify the current misalignment of the LiDAR/video data streams into one of a predefined set of offsets. DCNN's are probably the most successful deep learning model to date on fielded applications. The fact that the algorithm shares weights in the training phase, results in fewer model parameters and more efficient training. DCNN's are particularly useful for problems in which local structure is important, such as object recognition in images and temporal information for voice recognition. The alternating steps of convolution and pooling \textbf{(as depicted in figure X)}  generates features at multiple scales which in turn imbues DCNN's with scale invariant characteristics.
+Our models for auto-registration are DCNN's trained to classify the current misalignment of the LIDAR-video data streams into one of a predefined set of offsets. DCNN's are probably the most successful deep learning model to date on fielded applications. The fact that the algorithm shares weights in the training phase, results in fewer model parameters and more efficient training. DCNN's are particularly useful for problems in which local structure is important, such as object recognition in images and temporal information for voice recognition. The alternating steps of convolution and pooling \textbf{(as depicted in figure X)}  generates features at multiple scales which in turn imbues DCNN's with scale invariant characteristics.
 
 
 The model consists of a 4-layer \textbf{?} CNN classifier \textit{see image of network} that estimates the offset between the LV inputs at each time step. For each patch within a timestep, there are O variants with the LVF inputs offset by the predetermined amounts. The CNN outputs to a softmax layer, thereby providing an offset classification value for each patch of the frame. 
@@ -179,20 +209,7 @@ figure x: In the 5 class example we color each patch of the frame with a color c
 
 For each frame a simple voting scheme is used to aggregate the patch level offset predictions to frame level predictions. A sample histogram of the patch level predictions is show in figure x.
 
-\subsection{Optical Flow} % (fold)
-\label{sub:optical_flow}
-%\textit{kishore, please discuss the motivation to include dynamics, how we performed it and how we'd need to do it if running in real time. this is where we can point ot proof that it improves prediction.}
 
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[scale=0.85]{Figures/OpticalFlow_example_final.png}
-    \caption{Optical flow: Hue indicates orientation and saturation indicates magnitude}
-    \label{fig:Figures_OptFlow placeholder}
-\end{figure}
-
-In the area of navigation of mobile robots, optical flow has been widely used to estimate egomotion [\cite{Prazdny1980-egomotion-OF}], depth maps [\cite{Shahraray1988-depthestimation-OF}], reconstruct dynamic 3D scene depth [\cite{Yang2012-reconstruction-OF}], and segment moving object [\cite{Shao2002-seg-OF}]. In our work we use optical flow as an additional channel derived from two consecutive frames to capture the dynamics. Optical flow gives an estimate of velocity at each pixel given two consecutive frames. \cite{Chase2008Real-Time-} demonstrated that optical flow can be performed in real-time on FPGA and GPU architectures. In our work, we used the algorithm described in [\cite{Liu2009Beyond-Pix}] for computing optical flow. Figure \ref{fig:Figures_OptFlow placeholder} shows an example of the optical flow obtained using two frames from Ford LV dataset.
-
-% subsection optical_flow (end)
 % section model_description (end)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -230,13 +247,6 @@ As can be seen ...
 \label{sub:9_class_tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
 The subsequent tests were designed to understand whether the simple linear displacement model of the 5-class test could be generalized to a model capable of discriminating multiple directions and displacement magnitude. To achieve this 8 positions were chosen on an ellipse along with it's center \textbf{describe the parabola}. LV was offset in a manner similar to the 5 class test. Nine training and test sets were generated and an identical patch level CNN was constructed differing only in the 9 class softmax output layer. 
-
-\begin{figure}[htbp]
-    \centering
-        \includegraphics[scale=0.85]{Figures/ellipse.png}
-    \caption{Placeholder: Visualization of the LiDAR / video channel relative offsets}
-    \label{fig:Figures_Ellipse}
-\end{figure}
 
 \begin{figure}[htbp]
     \centering
