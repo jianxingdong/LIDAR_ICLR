@@ -227,8 +227,24 @@ Table 2 lists the inputs and CNN parameters explored ranked in the order of incr
  \textbf{Discussion: what results confirmed expectations or surprised us (grey scale). Can we confidently say optical flow improves prediction. }
 % subsection 9_class_tests (end)
 
-% section experiments_and_post_processing (end)
+\begin{figure}[htbp]
+    \centering
+    \subfigure[Patch level confusion matrix (41.05\% accuracy)]
+    {
+        \includegraphics[scale=0.3]{Figures/ford_GrayLUVch_5var_32patch_9class_trts_seperate_filtw999_conv120414_epoch_299_patch_level.png}
+        \label{fig:patch_level_cm_GrLUV}
+    }
+    \hspace{0.5cm}
+    \subfigure[Image level confusion matrix (76.69\% accuracy)]
+    {
+        \includegraphics[scale=0.3]{Figures/ford_GrayLUVch_5var_32patch_9class_trts_seperate_filtw999_conv120414_epoch_299_image_level.png}
+        \label{fig:image_level_cm_GrLUV}
+    }
+    \caption{Confusion Matrix for elliptically distributed $N=9$ classes using Greyscale, Optical Flow and LiDAR channels with a filter size of 9}
+    \label{fig:confusionmatrix}
+\end{figure}
 
+% section experiments_and_post_processing (end)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and Future Work} % (fold)
