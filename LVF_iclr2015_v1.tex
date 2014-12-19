@@ -221,7 +221,12 @@ please place any confusion matrices and your comments on what you think the resu
 feel free to suggest any tables or other visuals to include.}
 
 Table 2 lists the inputs and CNN parameters explored ranked in the order of increasing accuracy \textbf{(define accuracy and other cm metrics), include training vs test error and conf mats if room allows}.  
+\begin{tabular}{c}
 
+\end{tabular}
+            32,32,32	32,32,64 (Baseline)	64,64,64	7,7,7	9,9,9	RGBL	RLUV    GrayLUV	
+Image Level	61.75	61.06	60.09	61.79	63.03	60.66	67.61	67.98	73.42
+Patch Level	38.74	38.57	38.49	38.03	39.00	39.28	41.55	40.41	50.43
  \textbf{Discussion: what results confirmed expectations or surprised us (grey scale). Can we confidently say optical flow improves prediction. }
 % subsection 9_class_tests (end)
 
