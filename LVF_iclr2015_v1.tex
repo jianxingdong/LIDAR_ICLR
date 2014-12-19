@@ -172,17 +172,12 @@ Our models for auto-registration are DCNN's trained to classify the current misa
 
 
 The model consists of a 4-layer \textbf{?} CNN classifier \textit{see image of network} that estimates the offset between the LiDAR-video inputs at each time step. For each patch within a timestep, there are O variants with the LiDAR-video-optical flow inputs offset by the predetermined amounts. The CNN outputs to a softmax layer, thereby providing an offset classification value for each patch of the frame. 
-% figure of the colored class choices for the 5 class data set
-figure x: In the 5 class example we color each patch of the frame with a color corresponding to the predicted class. 
-
-For each frame a simple voting scheme is used to aggregate the patch level offset predictions to frame level predictions. A sample histogram of the patch level predictions is show in figure x.
-
-
 % section model_description (end)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Experiments and Post-processing} % (fold)
+%\section{Experiments and Post-processing} % (fold)
+\section{Experiments} % (fold)
 \label{sec:experiments_and_post_processing}
 
 The NVIDIA Kepler series K40 GPUs [\cite{NVIDIA-Inc.2012NVIDIAs-Ne}] are very FLOPS/Watt efficient and are being used to drive real-time image processing capabilities [\cite{Venugopal2013Accelerati}]. These GPUs consist of 2880 cores with 12 GB of on-board device memory (RAM). Deep Learning applications have been targeted on GPUs previously in [\cite{Krizhevsky2012Imagenet-C}] and these implementations are memory bound. A GPU with higher memory capacity is excellent for these experiments due to the number of channels that are stacked and provided as the input to the DCNN. The LiDAR-video dataset is augmented with the optical flow information resulting in 6 channels which means that the input to the DCNN is $32\times32\times6$ per patch. Figure \ref{fig:Figures_lidar_dcnn_setup1} shows the setup used for the DCNN implementation on the GPU, where \emph{C} defines the number of channels.
@@ -194,14 +189,6 @@ The NVIDIA Kepler series K40 GPUs [\cite{NVIDIA-Inc.2012NVIDIAs-Ne}] are very FL
     \label{fig:Figures_lidar_dcnn_setup1}
 \end{figure}
 
-\textit{Need a complete list of the experiments run
-images to visualize the frame level results
-please place any confusion matrices and your comments on what you think the results say.
-feel free to suggest any tables or other visuals to include.}
-
-
-
-
 %\subsection{5 class tests} % (fold)
 %\label{sub:5_class_tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
@@ -211,20 +198,29 @@ feel free to suggest any tables or other visuals to include.}
 % subsection 5_class_tests (end)
 
 
-\subsection{Elliptically distributed offsets} % (fold)
+\subsection{Data set using elliptically distributed offsets} % (fold)
 %\subsection{9 class tests} % (fold
 \label{sub:9_class_tests}
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
 %The subsequent tests were designed to understand whether the simple linear displacement model of the 5-class test could be generalized to a model capable of discriminating multiple directions and displacement magnitude. To achieve this 8 positions were chosen on an ellipse along with it's center \textbf{describe the parabola}. LiDAR-video was offset in a manner similar to the 5 class test. Nine training and test sets were generated and an identical patch level CNN was constructed differing only in the 9 class softmax output layer. 
 
-In our experiments, elliptically distributed set of 9 offsets of the LiDAR-video data were considered. The LiDAR data is displaced along an ellipse with a major axis of 32 pixels and a minor axis of 16 rotated clockwise from x axis by 45 degrees as shown in Figure \ref{fig:Figures_Ellipse}. Separate training and testing sets were generated from two different tracks as shown in Figure \ref{fig:ford_train_test_track} for all the 9 offsets of LiDAR data.
+In our experiments, elliptically distributed set of 9 offsets of the LiDAR-video data were considered. The LiDAR data is displaced along an ellipse with a major axis of 32 pixels and a minor axis of 16 rotated clockwise from x-axis by 45 degrees as shown in Figure \ref{fig:Figures_Ellipse}. Separate training and testing sets were generated from two different tracks as shown in Figure \ref{fig:ford_train_test_track} for all the 9 offsets of LiDAR data. Training and testing tracks have never seen regions and also have different lighting conditions. Our preprocessing step results in 223371 and 126513 patches for testing and training extracted from 469 and 224 images respectively.
+
+In the testing phase, for each frame a simple voting scheme is used to aggregate the patch level offset predictions to a single frame level prediction. A sample histogram of the patch level predictions is show in Figure~\ref{fig:Figures_Voting}. We color each patch of the frame with a color corresponding to the predicted class as shown in Figure~\ref{fig:Figures_Voting}. 
 
 \begin{figure}[htbp]
     \centering
         \includegraphics[scale=0.35]{Figures/Voting_final.png}
-    \caption{Left: Histogram of the classes detected by all patches. Right: Location of patches color coded with the detected class}
+    \caption{Left: Histogram of the classes detected by all patches. Right: Location of patches color coded with the predicted class}
     \label{fig:Figures_Voting}
 \end{figure}
+
+\subsection{Experimental results} % (fold)
+\label{sub:experimental_results}
+\textit{Need a complete list of the experiments run
+images to visualize the frame level results
+please place any confusion matrices and your comments on what you think the results say.
+feel free to suggest any tables or other visuals to include.}
 
 Table 2 lists the inputs and CNN parameters explored ranked in the order of increasing accuracy \textbf{(define accuracy and other cm metrics), include training vs test error and conf mats if room allows}.  
 
