@@ -207,26 +207,41 @@ In the testing phase, for each frame a simple voting scheme is used to aggregate
 \label{sub:experimental_results}
 % \textit{Need a complete list of the experiments run images to visualize the frame level results, please place any confusion matrices and your comments on what you think the results say. feel free to suggest any tables or other visuals to include.}
 
-Table~\ref{table:cnn_param} lists the inputs and CNN parameters explored ranked in the order of increasing accuracy. We averaged the values across the diagonal of the confusion matrix to determine the image level and patch level accuracy. Patch level accuracy is the individual performance of all the $32\times32$ patches from the testing images. Classification of patches belonging to a single time-step are voted to predict the shift for image level accuracy. In Table~\ref{table:cnn_param}, the first 3 columns show the results for different number of filter combinations in the convolutional layers with fixed number of filters and input channels \emph{RGBLUV}. We observed that the image  and patch level accuracy decreased with the increase in the number of filters. For experiments shown in columns 4 and 5, the filter size was increased, with the number of filters constant at $(32,32,64)$. We observed that for the 6 channels \emph{RGBLUV}, filter size of 9 gave the best image level accuracy of $63.03\%$. Column 6 shows the results of our experiment after dropping the optical flow \emph{UV} channels. The image and patch level accuracy decreased for this case, indicating that optical flow contributed significantly towards image registration. The remaining experiments utilized the Grayscale information \emph{Gr} instead of \emph{RGB} and produced the best results with $76.69\%$ and $41.05\%$ image and patch level accuracy respectively.
+Table~\ref{table:cnn_param} lists the inputs and CNN parameters explored ranked in the order of increasing accuracy. We averaged the values across the diagonal of the confusion matrix to determine the image level and patch level accuracy. Patch level accuracy is the individual performance of all the $32\times32$ patches from the testing images. Classification of patches belonging to a single time-step are voted to predict the shift for image level accuracy. In Table~\ref{table:cnn_param}, the first 3 columns show the results for different number of filter combinations in the convolutional layers with fixed number of filters and input channels \emph{RGBLUV}. We observed that the image  and patch level accuracy decreased with the increase in the number of filters. For experiments shown in columns 4 and 5, the filter size was increased, with the number of filters constant at $(32,32,64)$. We observed that for the 6 channels \emph{RGBLUV}, filter size of 9 gave the best image level accuracy of $63.03\%$. Column 6 shows the results of our experiment after dropping the optical flow \emph{UV} channels. The image and patch level accuracy decreased for this case, indicating that optical flow contributed significantly towards image registration. The remaining experiments utilized the Grayscale information \emph{Gr} instead of \emph{RGB} and produced the best results with $76.69\%$ and $41.05\%$ image and patch level accuracy respectively. Table~\ref{table:temporal_performance} shows that by using information from consecutive frames the performance increases significantly.
 
 \begin{table}[ht]
 \small
 \caption{Results of different combination of input channels \emph{C} and CNN parameters}
 
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|} \hline
+\begin{center}
+\begin{tabular}{|p{2cm}|c|c|c|c|c|c|c|c|} \hline
     \textbf{Channels} & \multicolumn{5}{|c|}{RGBLUV} & RGBL & \multicolumn{2}{|c|}{GrLUV} \\
     \hline
     \textbf{Filter size} &\multicolumn{3}{|c|}{5} & 7 & 9 & \multicolumn{2}{|c|}{5} & 9 \\
     \hline
     \textbf{\# of filters} & (32,32,32) & (32,32,64) & (64,64,64) & \multicolumn{5}{|c|}{(32,32,64)}  \\
     \hline
-    \textbf{Image Level accuracy} & 61.75 & 61.06 & 60.09 & 61.79 & 63.03 & 60.66 & 68.03 & \textbf{76.69} \\
+    \textbf{Image Level accuracy(\%)} & 61.75 & 61.06 & 60.09 & 61.79 & 63.03 & 60.66 & 68.03 & \textbf{76.69} \\
     \hline
-    \textbf{Patch Level accuracy} & 38.74 & 38.57 & 38.49 & 38.03 & 39.00 & 39.28 & 40.96 & \textbf{41.05} \\
+    \textbf{Patch Level accuracy(\%)} & 38.74 & 38.57 & 38.49 & 38.03 & 39.00 & 39.28 & 40.96 & \textbf{41.05} \\
     \hline
 \end{tabular}
 \label{table:cnn_param}
+\end{center}
 \end{table}
+
+\begin{table}[ht]
+\small
+\caption{Performance using temporal information}
+\begin{center}
+     \begin{tabular}{ | p{4cm} | l | l | l | l | l | l | l | l |} \hline
+     \textbf{Number of consecutive time-steps used} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline
+     \textbf{Accuracy(\%)} & 76.33 & 85.42 & 88.88 & 90.30 & 92.52 & 93.85 & 94.29 & 95.12\\ \hline
+     \end{tabular}
+     \label{table:temporal_performance}
+\end{center}
+\end{table}
+
 
 % subsection 9_class_tests (end)
 
@@ -252,7 +267,7 @@ Table~\ref{table:cnn_param} lists the inputs and CNN parameters explored ranked 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and Future Work} % (fold)
 \label{sec:conclusions_and_future_work}
-In this paper, we proposed a deep learning method to do LiDAR-Video registration. We demonstrated the effect of filter size, number of filters and different channels. We also showed the advantage of optical flow and grey scale.
+In this paper, we proposed a deep learning method to do LiDAR-Video registration. We demonstrated the effect of filter size, number of filters and different channels. We also showed the advantage of using temporal information, optical flow and grey scale.
 %future: 
 The next step in taking this work forward is to complete our development of a deep auto-registration method for ground and aerial platforms requiring no apriori calibration ground truth.  Our aerial applications in particular present noisier data with an increased number of degrees of freedom. The extension of these methods to simultaneously register information across multiple platforms and larger numbers of modalities will provide interesting challenges that we look forward to working on. 
 
