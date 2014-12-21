@@ -67,10 +67,10 @@ In this paper, the main contributions are: (i) formulation of an image registrat
 %%Multi-modal data fusion
 A great amount has been published on various multi-modal fusion methods [\cite{Ross2003Informatio}, \cite{Gregor2011Learning-R}, \cite{Wu2004Optimal-Mu}, \cite{Snoek2006The-Challe}]. The most common approaches taken generate features of interest in each modality separately and create a decision support mechanism that aggregates features across modalities. If spatial alignment is required across modalities, as it is for LiDAR-video such filter methods \cite{Thrun2011Googles-dr} are required to ensure proper inter-modal registration. These filter methods for leveraging 3D LiDAR and 2D images are often geometric in nature and make use of projections between the different data spaces. 
 
-Automatic registration of 2D video and 3D LiDAR has been a widely researched topic for over a decade [\cite{ Wang2009A-Robust-A}~\cite{Kim2014Automatic-}~\cite{Mastin2009Automatic-}~\cite{Bodensteiner2012Real-time-}]. Its application in real-time autonomous navigation makes it a challenging problem. Majority of the 2D-3D registration algorithms are based on feature matching. Geometric features like corners and edges are extracted from detected vanishing points [~\cite{Liu2007-Vanishing-points},~\cite{Ding2008-Vanishing-point}], line segments [~\cite{Frueh2004-Linesegment}, ~\cite{Stamos2008-Linesegment}], and shadows [~\cite{Troccoli2004-ashadow}]. Feature based approaches generally rely on dense 3D point cloud and additional knowledge of relative sun position and GPS/inertial navigation system (INS). Another approach used for video and LiDAR auto-registration is to reconstruct 3D point cloud from video sequences using structure from motion (SFM) and performing 3D-3D registration [~\cite{Zhao2004-alignment-3Dcloud}~\cite{Liu2006-alignment-sfm}]. 3D-3D registration is more difficult and computationally expensive compared to 2D-3D registration. 
+Automatic registration of 2D video and 3D LiDAR has been a widely researched topic for over a decade [\cite{ Wang2009A-Robust-A}, ~\cite{Kim2014Automatic-}, ~\cite{Mastin2009Automatic-}, ~\cite{Bodensteiner2012Real-time-}]. Its application in real-time autonomous navigation makes it a challenging problem. Majority of the 2D-3D registration algorithms are based on feature matching. Geometric features like corners and edges are extracted from detected vanishing points [~\cite{Liu2007-Vanishing-points},~\cite{Ding2008-Vanishing-point}], line segments [~\cite{Frueh2004-Linesegment}, ~\cite{Stamos2008-Linesegment}], and shadows [~\cite{Troccoli2004-ashadow}]. Feature based approaches generally rely on dense 3D point cloud and additional knowledge of relative sun position and GPS/inertial navigation system (INS). Another approach used for video and LiDAR auto-registration is to reconstruct 3D point cloud from video sequences using structure from motion (SFM) and performing 3D-3D registration [~\cite{Zhao2004-alignment-3Dcloud}, ~\cite{Liu2006-alignment-sfm}]. 3D-3D registration is more difficult and computationally expensive compared to 2D-3D registration. 
 %%deep learning multi-modal data fusion with CNN's
 
-The use of deep neural networks to analyze multi-modal sensor inputs  has increased sharply in just the last few years, including audio-video \cite{Ngiam2011Multimodal} \cite{Kim2013Deep-Learn}, image/text \cite{Srivastava2012Multimodal}, image/depth \cite{Lenz2013Deep-Learn} and LiDAR-video To the best of our knowledge the use of multi-modal deep neural networks for dynamic LiDAR-video registration has not been presented.
+The use of deep neural networks to analyze multi-modal sensor inputs  has increased sharply in just the last few years, including audio-video [\cite{Ngiam2011Multimodal}, \cite{Kim2013Deep-Learn}], image/text [\cite{Srivastava2012Multimodal}], image/depth [\cite{Lenz2013Deep-Learn}] and LiDAR-video To the best of our knowledge the use of multi-modal deep neural networks for dynamic LiDAR-video registration has not been presented.
 
 A common challenge for data fusion methods is deciding at what level features from the differing sensor streams should be brought together. The deep neural network (DNN) approach most similar to the more traditional data fusion methods is to train DNNs independently on sensor modalities and then use the high-level outputs of those networks as inputs to a subsequent aggregator, which could also be a DNN. This is analogous to the earlier example of learning 3D/2D features and the process of identifying common geometric features. 
 
@@ -86,7 +86,7 @@ Deep convolutional neural networks (DCNN) enable a similar agnostic approach to 
 \section{Problem Statement} % (fold)
 \label{sec:problem_statement}
 
-Being able to detect and correct the misalignment (registration, calibration) among sensors of the same or different kinds, is critical for decision support systems operating on their fused information streams. For our work DCNNs were implemented for the detection of small spatial misalignments in LiDAR and Video frames. The methodology is directly applicable to temporal registration as well. LiDAR-video data collected from a driverless car was chosen for the multi-modal fusion test case. LiDAR-video is a common combination for providing perception capabilities to many types of ground and airborne platforms including driverless cars \cite{Thrun2011Googles-dr}. 
+Being able to detect and correct the misalignment (registration, calibration) among sensors of the same or different kinds, is critical for decision support systems operating on their fused information streams. For our work DCNNs were implemented for the detection of small spatial misalignments in LiDAR and Video frames. The methodology is directly applicable to temporal registration as well. LiDAR-video data collected from a driverless car was chosen for the multi-modal fusion test case. LiDAR-video is a common combination for providing perception capabilities to many types of ground and airborne platforms including driverless cars [\cite{Thrun2011Googles-dr}]. 
 
 \subsection{Ford LiDAR-video Dataset and Experimental Setup} % (fold)
 \label{sub:ford_lidar_video_dataset_and_experimental_setup}
@@ -98,11 +98,11 @@ Being able to detect and correct the misalignment (registration, calibration) am
     \label{fig:ford-truck-sensors}
 \end{figure}
 
-The FORD LiDAR-video dataset \cite{Pandey2011Ford-Campu} is collected by an autonomous Ford F-250 vehicle integrated with the following perception and navigation sensors as shown in Figure \ref{fig:ford-truck-sensors}:
+The FORD LiDAR-video dataset [\cite{Pandey2011Ford-Campu}] is collected by an autonomous Ford F-250 vehicle integrated with the following perception and navigation sensors as shown in Figure \ref{fig:ford-truck-sensors}:
 \begin{itemize}
     \item Velodyne HDL-64E LiDAR with two blocks of lasers spinning at 10 Hz and a maximum range of 120m.
     \item Point Grey Ladybug3 omni-directional camera system with six 2-Mega-pixel cameras collecting video data at 8fps with $1600\times1600$ resolution.
-    \item Two Riegl LMS-Q120 LIDAR sensors installed in the front of the vehicle generating range and intensity data when the laser sweeps its 80\degree field of view (FOV).
+    \item Two Riegl LMS-Q120 LIDAR sensors installed in the front of the vehicle generating range and intensity data when the laser sweeps its $80\degree$ field of view (FOV).
     \item Applanix POS-LV420 INS with Trimble GPS system providing the 6 degrees of freedom (DOF) estimates at 100 Hz.
     \item Xsens MTi-G sensor consisting of accelerometer, gyroscope, magnetometer, integrated GPS receiver, static pressure sensor and temperature sensor. It measures the GPS co-ordinates of the vehicle and also provides the 3D velocity and 3D rate of turn.
 \end{itemize}
@@ -128,7 +128,7 @@ This dataset is generated by the vehicle while driving in and around the Ford re
     \label{fig:Figures_OptFlow placeholder}
 \end{figure}
 
-In the area of navigation of mobile robots, optical flow has been widely used to estimate egomotion [\cite{Prazdny1980-egomotion-OF}], depth maps [\cite{Shahraray1988-depthestimation-OF}], reconstruct dynamic 3D scene depth [\cite{Yang2012-reconstruction-OF}], and segment moving objects [\cite{Shao2002-seg-OF}]. Optical flow provides information of the scene dynamics and is expressed as an estimate of velocity at each pixel from two consecutive frames, denoted by $\vec{u}$ and $\vec{v}$. The motion field from these two frames is measured by the motion of the pixel brightness pattern, where the changes in image brightness is due to the camera or object motion. \cite{Liu2009Beyond-Pix} describes an algorithm for computing optical flow from images, which is used during the preprocessing step. Figure \ref{fig:Figures_OptFlow placeholder} shows an example of the optical flow computed using two consecutive frames from the Ford LiDAR-video dataset. By including optical flow as input channels, we imbue the DCNN with information on the dynamics observed across time steps.
+In the area of navigation of mobile robots, optical flow has been widely used to estimate egomotion [\cite{Prazdny1980-egomotion-OF}], depth maps [\cite{Shahraray1988-depthestimation-OF}], reconstruct dynamic 3D scene depth [\cite{Yang2012-reconstruction-OF}], and segment moving objects [\cite{Shao2002-seg-OF}]. Optical flow provides information of the scene dynamics and is expressed as an estimate of velocity at each pixel from two consecutive frames, denoted by $\vec{u}$ and $\vec{v}$. The motion field from these two frames is measured by the motion of the pixel brightness pattern, where the changes in image brightness is due to the camera or object motion. [\cite{Liu2009Beyond-Pix}] describes an algorithm for computing optical flow from images, which is used during the preprocessing step. Figure \ref{fig:Figures_OptFlow placeholder} shows an example of the optical flow computed using two consecutive frames from the Ford LiDAR-video dataset. By including optical flow as input channels, we imbue the DCNN with information on the dynamics observed across time steps.
 
 % subsection optical_flow (end)
 
@@ -137,16 +137,16 @@ In the area of navigation of mobile robots, optical flow has been widely used to
 %image of LiDAR-video-optical flow data with channels, patches and images(frames) denoted.
 At each video frame timestep, the inputs to our model consist of \emph{C} channels of data with \emph{C} ranging from 3-6 channels. Channels consist of grayscale \emph{Gr} or \emph{(R,G,B)} information from the video, horizontal and vertical components of optical flow \emph{(U,V)} and depth information \emph{L} from LiDAR The data from each modality is reshaped to a fixed size of $800\times256$ values, which are partitioned into $p\times p$ patches at a prescribed stride. Each patch $p\times p$ is stacked across \emph{C} channels, effectively generating a vector of \emph{C} dimensions. The different preprocessing parameters are denoted by patch size \emph{p}, stride \emph{s} and the number of input channels \emph{C}.
 
-Preprocessing is repeated \emph{N} times, where \emph{N} is the number of offset classes. For each offset class, the video (R,G,B) and optical flow (U,V) channels are kept static and the depth (L) channel from the LiDAR is moved by the offset simulating a misalignment between the video and the LiDAR sensors. In order to accurately detect the misalignment in the LiDAR and Video sensor data, a threshold is set to limit the information available in each channel. The LiDAR data has regions of sparsity and hence the LiDAR patches with a variance (${\sigma}^2 < 15\%$) are dropped from the final dataset. This leads to the elimination of the majority of foreground patches in the data set, reducing the size of the training and testing set by approximately 80\%. Figure \ref{fig:Figures_Ellipse} shows a $N = 9$ class elliptically distributed set of offsets and Figure \ref{fig:ImageChStride} shows a $p\times p$ patch stacked across all the different \emph{C} channels.
+Preprocessing is repeated \emph{N} times, where \emph{N} is the number of offset classes. For each offset class, the video (R,G,B) and optical flow (U,V) channels are kept static and the depth (L) channel from the LiDAR is moved by the offset simulating a misalignment between the video and the LiDAR sensors. In order to accurately detect the misalignment in the LiDAR and Video sensor data, a threshold is set to limit the information available in each channel. The LiDAR data has regions of sparsity and hence the LiDAR patches with a variance (${\sigma}^2 < 15\%$) are dropped from the final dataset. This leads to the elimination of the majority of foreground patches in the data set, reducing the size of the training and testing set by approximately $80\%$. Figure \ref{fig:Figures_Ellipse} shows a $N = 9$ class elliptically distributed set of offsets and Figure \ref{fig:ImageChStride} shows a $p\times p$ patch stacked across all the different \emph{C} channels.
 
 \begin{figure}[htbp]
     \centering
     \subfigure[Visualization of the elliptically distributed $N=9$ classes]
     {
-        \includegraphics[scale=0.25]{ellipse_final_small.png}
+        \includegraphics[scale=0.25]{ellipse_new1.pdf}
         \label{fig:Figures_Ellipse}
     }
-    \hspace{0.5cm}
+    \hspace{0.2cm}
     \subfigure[Stacking of $p\times p$ patch over all the different channels]
     {
         \includegraphics[scale=0.45]{ImagePatchChannel_v2.pdf}
@@ -173,7 +173,7 @@ Our models for auto-registration are DCNNs trained to classify the current misal
     \label{fig:Figures_lidar_dcnn_setup1}
 \end{figure}
 
-The model shown in Figure \ref{fig:Figures_lidar_dcnn_setup1} consists of 3 pairs of convolution-pooling layers, that estimates the offset between the LiDAR-video inputs at each time step. For each patch within a timestep, there are O variants with the LiDAR-video-optical flow inputs offset by the predetermined amounts. The CNN outputs to a softmax layer, thereby providing an offset classification value for each patch of the frame. As described in Section \ref{sub:preprocessing}, $32\times32$ patches were stacked across the different channels and provided as the input to the DCNN. All the $6$ channels \emph{RGBLUV} were used for the majority of the experiments, whereas only $4$ channels were required for the \emph{RGBL} and the \emph{GrLUV} experiments. The first convolutional layer uses $32$ filters (or kernels) of size $5 \times 5 \times \mathit{C} $ with a stride of $1$ pixel and padding of $2$ pixels on the edges. The following pooling layer generates the input data (of size $16 \times 16 \times 32$) for the second convolutional layer. This layer uses $32$ filters of size $5 \times 5 \times 32$ with a stride of $1$ pixel and padding of $2$ pixels on the edges. A second pooling layer, similar to the first one is used to generate input with size $8 \times 8 \times 32$ for the third convolutional layer that uses $64$ filters of size $5 \times 5 \times 32$ with the stride and padding same as previous convolutional layer. The third pooling layer with similar configuration as the two previous pooling layers connects to an output softmax layer with labels corresponding to the $N=9$ classes. The DCNN described above was trained using stochastic gradient descent with a mini-batch size of $100$ epochs.
+The model shown in Figure \ref{fig:Figures_lidar_dcnn_setup1} consists of 3 pairs of convolution-pooling layers, that estimates the offset between the LiDAR-video inputs at each time step. For each patch within a timestep, there are $N$ variants with the LiDAR-video-optical flow inputs offset by the predetermined amounts. The CNN outputs to a softmax layer, thereby providing an offset classification value for each patch of the frame. As described in Section \ref{sub:preprocessing}, $32\times32$ patches were stacked across the different channels and provided as the input to the DCNN. All the $6$ channels \emph{RGBLUV} were used for the majority of the experiments, whereas only $4$ channels were required for the \emph{RGBL} and the \emph{GrLUV} experiments. The first convolutional layer uses $32$ filters (or kernels) of size $5 \times 5 \times \mathit{C} $ with a stride of $1$ pixel and padding of $2$ pixels on the edges. The following pooling layer generates the input data (of size $16 \times 16 \times 32$) for the second convolutional layer. This layer uses $32$ filters of size $5 \times 5 \times 32$ with a stride of $1$ pixel and padding of $2$ pixels on the edges. A second pooling layer, similar to the first one is used to generate input with size $8 \times 8 \times 32$ for the third convolutional layer that uses $64$ filters of size $5 \times 5 \times 32$ with the stride and padding same as previous convolutional layer. The third pooling layer with similar configuration as the two previous pooling layers connects to an output softmax layer with labels corresponding to the $N=9$ classes. The DCNN described above was trained using stochastic gradient descent with a mini-batch size of $100$ epochs. The DCNN is configured with Rectified Linear Units (ReLUs), as they train several times faster than their equivalents with $\tanh$ connections [\cite{Nair2010Rectified-}]
 
 The NVIDIA Kepler series K40 GPUs [\cite{NVIDIA-Inc.2012NVIDIAs-Ne}] are very FLOPS/Watt efficient and are being used to drive real-time image processing capabilities [\cite{Venugopal2013Accelerati}]. These GPUs consist of 2880 cores with 12 GB of on-board device memory (RAM). Deep Learning applications have been targeted on GPUs previously in [\cite{Krizhevsky2012Imagenet-C}] and these implementations are both compute and memory bound. Stacking of channels results in a vector of $32 \times 32 \times \mathit{C}$, which is suitable for the Single Instruction Multiple Datapath (SIMD) architecture of the GPUs. At the same time, the training batch size caches in the GPU memory, so the utilization of the K40 GPU's memory is very high. This also results in our experiments to run successfully on a single GPU instead of partitioning the different layers over multiple GPUs.
  
@@ -190,7 +190,7 @@ The NVIDIA Kepler series K40 GPUs [\cite{NVIDIA-Inc.2012NVIDIAs-Ne}] are very FL
 % require a table of the different parameter settings, along with some aggregate measures from the confusion matrices. 
 %The subsequent tests were designed to understand whether the simple linear displacement model of the 5-class test could be generalized to a model capable of discriminating multiple directions and displacement magnitude. To achieve this 8 positions were chosen on an ellipse along with it's center \textbf{describe the parabola}. LiDAR-video was offset in a manner similar to the 5 class test. Nine training and test sets were generated and an identical patch level CNN was constructed differing only in the 9 class softmax output layer. 
 
-In our experiments, elliptically distributed set of 9 offsets of the LiDAR-video data were considered. The LiDAR data is displaced along an ellipse with a major axis of 32 pixels and a minor axis of 16 rotated clockwise from x-axis by 45 degrees as shown in Figure \ref{fig:Figures_Ellipse}. Separate training and testing sets were generated from two different tracks as shown in Figure \ref{fig:ford_train_test_track} for all the 9 offsets of LiDAR data. Training and testing tracks have never seen regions and also have different lighting conditions. Our preprocessing step described in Section~\ref{sub:preprocessing} results in 223371 and 126513 patches for testing and training extracted from 469 and 224 images respectively.
+In our experiments, elliptically distributed set of $N = 9$ offsets of the LiDAR-video data were considered. The LiDAR data is displaced along an ellipse with a major axis of $32$ pixels and a minor axis of $16$ pixels rotated clockwise from x-axis by $45\degree$ as shown in Figure \ref{fig:Figures_Ellipse}. Separate training and testing sets were generated from two different tracks as shown in Figure \ref{fig:ford_train_test_track} for all the $N = 9$ offsets of LiDAR data. Training and testing tracks have never seen regions and also have different lighting conditions. Our preprocessing step described in Section~\ref{sub:preprocessing} results in $223,371$ and $126,513$ patches for testing and training extracted from $469$ and $224$ images respectively.
 
 In the testing phase, for each frame a simple voting scheme is used to aggregate the patch level offset predictions to a single frame level prediction. A sample histogram of the patch level predictions is show in Figure~\ref{fig:Figures_Voting}. We color each patch of the frame with a color corresponding to the predicted class as shown in Figure~\ref{fig:Figures_Voting}. 
 
@@ -206,8 +206,6 @@ In the testing phase, for each frame a simple voting scheme is used to aggregate
 \subsection{Experimental results} % (fold)
 \label{sub:experimental_results}
 % \textit{Need a complete list of the experiments run images to visualize the frame level results, please place any confusion matrices and your comments on what you think the results say. feel free to suggest any tables or other visuals to include.}
-
-Table~\ref{table:cnn_param} lists the inputs and CNN parameters explored ranked in the order of increasing accuracy. We averaged the values across the diagonal of the confusion matrix to determine the image level and patch level accuracy. Patch level accuracy is the individual performance of all the $32\times32$ patches from the testing images. Classification of patches belonging to a single time-step are voted to predict the shift for image level accuracy. In Table~\ref{table:cnn_param}, the first 3 columns show the results for different number of filter combinations in the convolutional layers with fixed number of filters and input channels \emph{RGBLUV}. We observed that the image  and patch level accuracy decreased with the increase in the number of filters. For experiments shown in columns 4 and 5, the filter size was increased, with the number of filters constant at $(32,32,64)$. We observed that for the 6 channels \emph{RGBLUV}, filter size of 9 gave the best image level accuracy of $63.03\%$. Column 6 shows the results of our experiment after dropping the optical flow \emph{UV} channels. The image and patch level accuracy decreased for this case, indicating that optical flow contributed significantly towards image registration. The remaining experiments utilized the Grayscale information \emph{Gr} instead of \emph{RGB} and produced the best results with $76.69\%$ and $41.05\%$ image and patch level accuracy respectively. Table~\ref{table:temporal_performance} shows that by using information from consecutive frames the performance increases significantly.
 
 \begin{table}[ht]
 \small
@@ -230,22 +228,23 @@ Table~\ref{table:cnn_param} lists the inputs and CNN parameters explored ranked 
 \end{center}
 \end{table}
 
-\begin{table}[ht]
-\small
-\caption{Performance using temporal information}
-\begin{center}
-     \begin{tabular}{ | p{4cm} | l | l | l | l | l | l | l | l |} \hline
-     \textbf{Number of consecutive time-steps used} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline
-     \textbf{Accuracy(\%)} & 76.33 & 85.42 & 88.88 & 90.30 & 92.52 & 93.85 & 94.29 & 95.12\\ \hline
-     \end{tabular}
-     \label{table:temporal_performance}
-\end{center}
-\end{table}
+Table~\ref{table:cnn_param} lists the inputs and CNN parameters explored ranked in the order of increasing accuracy. We averaged the values across the diagonal of the confusion matrix to determine the image level and patch level accuracy. Patch level accuracy is the individual performance of all the $32\times32$ patches from the testing images. Classification of patches belonging to a single time-step are voted to predict the shift for image level accuracy. In Table~\ref{table:cnn_param}, the first 3 columns show the results for different number of filter combinations in the convolutional layers with fixed number of filters and input channels \emph{RGBLUV}. We observed that the image  and patch level accuracy decreased with the increase in the number of filters. For experiments shown in columns 4 and 5, the filter size was increased, with the number of filters constant at $(32,32,64)$. We observed that for the 6 channels \emph{RGBLUV}, filter size of 9 gave the best image level accuracy of $63.03\%$. Column 6 shows the results of our experiment after dropping the optical flow \emph{UV} channels. The image and patch level accuracy decreased for this case, indicating that optical flow contributed significantly towards image registration. The remaining experiments utilized the Grayscale information \emph{Gr} instead of \emph{RGB} and produced the best results with $76.69\%$ and $41.05\%$ image and patch level accuracy respectively. Table~\ref{table:temporal_performance} shows that by using information from consecutive frames the performance increases significantly.
 
 
-% subsection 9_class_tests (end)
 
-\begin{figure}[h!]
+% \begin{table}[ht]
+% \small
+% \caption{Performance using temporal information}
+% \begin{center}
+%      \begin{tabular}{ | p{4cm} | l | l | l | l | l | l | l | l |} \hline
+%      \textbf{Number of consecutive time-steps used} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline
+%      \textbf{Accuracy(\%)} & 76.33 & 85.42 & 88.88 & 90.30 & 92.52 & 93.85 & 94.29 & 95.12\\ \hline
+%      \end{tabular}
+%      \label{table:temporal_performance}
+% \end{center}
+% \end{table}
+
+\begin{figure}[htbp]
     \centering
     \subfigure[Patch level confusion matrix (41.05\% accuracy)]
     {
@@ -262,12 +261,27 @@ Table~\ref{table:cnn_param} lists the inputs and CNN parameters explored ranked 
     \label{fig:confusionmatrix}
 \end{figure}
 
+
+\begin{table}[htbp]
+\small
+\caption{Performance using temporal information}
+\begin{center}
+     \begin{tabular}{ | p{4cm} | l | l | l | l | l | l | l | l |} \hline
+     \textbf{Number of consecutive time-steps used} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\ \hline
+     \textbf{Accuracy(\%)} & 76.33 & 85.42 & 88.88 & 90.30 & 92.52 & 93.85 & 94.29 & 95.12\\ \hline
+     \end{tabular}
+     \label{table:temporal_performance}
+\end{center}
+\end{table}
+
+% subsection 9_class_tests (end)
+
 % section experiments (end)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and Future Work} % (fold)
 \label{sec:conclusions_and_future_work}
-In this paper, we proposed a deep learning method to do LiDAR-Video registration. We demonstrated the effect of filter size, number of filters and different channels. We also showed the advantage of using temporal information, optical flow and grey scale.
+In this paper, we proposed a deep learning method to do LiDAR-Video registration. We demonstrated the effect of filter size, number of filters and different channels. We also showed the advantage of using temporal information, optical flow and grayscale.
 %future: 
 The next step in taking this work forward is to complete our development of a deep auto-registration method for ground and aerial platforms requiring no a priori calibration ground truth.  Our aerospace applications in particular present noisier data with an increased number of degrees of freedom. The extension of these methods to simultaneously register information across multiple platforms and larger numbers of modalities will provide interesting challenges that we look forward to working on. 
 
